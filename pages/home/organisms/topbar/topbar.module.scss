@@ -1,0 +1,17 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  div {
+    display: flex;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  overflow: hidden;
+  align-items: center;
+}
