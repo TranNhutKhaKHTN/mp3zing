@@ -1,0 +1,16 @@
+.bodyContent1 {
+  display: flex;
+  margin-top: 15px;
+  .leftContent {
+    width: 70%;
+    // background-color: yellow;
+    height: 10000px;
+    margin-right: 15px;
+  }
+
+  .rightContent {
+    width: 30%;
+    background-color: yellowgreen;
+    height: 10000px;
+  }
+}

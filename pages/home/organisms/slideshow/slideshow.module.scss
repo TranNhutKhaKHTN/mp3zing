@@ -1,0 +1,22 @@
+.slideshow {
+  width: 100%;
+
+  #imageSelect {
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    transition: transform 1s;
+  }
+  .imageItems {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    img {
+      width: 19%;
+      height: 50px;
+      background-color: black;
+      cursor: pointer;
+    }
+  }
+}

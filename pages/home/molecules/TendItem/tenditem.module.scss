@@ -1,0 +1,26 @@
+.tenditem {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infor {
+  width: 100%;
+  display: flex;
+}
+
+.rightItem {
+  width: 80%;
+}
+
+.leftItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.number {
+  font-size: 20px;
+}

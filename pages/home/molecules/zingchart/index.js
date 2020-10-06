@@ -20,20 +20,24 @@ function ZingChart(props) {
         <b>
           TUẦN
         </b>
-        <p>
-          Bài hát
-        </p>
+        <p>Bài hát</p>
         <p>MV</p>
-        <p>TUẦN</p>
+        <p>Album</p>
       </div>
       <div>
         <b>
           US-UK CHART
         </b>
+        <p>Bài hát</p>
+        <p>MV</p>
+        <p>Album</p>
       </div>
 
       <div>
         <b>KPOP CHART</b>
+        <p>Bài hát</p>
+        <p>MV</p>
+        <p>Album</p>
       </div>
     </div>
   );

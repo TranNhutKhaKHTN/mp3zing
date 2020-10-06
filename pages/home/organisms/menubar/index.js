@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './menubar.module.scss'
-import { HomeOutlined } from '@ant-design/icons'
+import { HomeOutlined, PoweroffOutlined, CloudUploadOutlined } from '@ant-design/icons'
 import ZingChart from '../../molecules/zingchart';
 
 Menubar.propTypes = {
@@ -19,7 +19,9 @@ function Menubar(props) {
               Nhạc Cá Nhân
             </div>
           </div>
-
+          <div>
+            |
+          </div>
           <div className={styles.item}>
             <div>
               #zingchart
@@ -59,7 +61,12 @@ function Menubar(props) {
             </div>
           </div>
         </ul>
-        <div>Tắt quảng cáo</div>
+
+        <div>
+          <PoweroffOutlined style={{ fontSize: 16, marginRight: 10 }} />
+           Tắt quảng cáo
+          <CloudUploadOutlined style={{ fontSize: 18, marginLeft: 10 }} />
+        </div>
       </div>
     </div>
   );
