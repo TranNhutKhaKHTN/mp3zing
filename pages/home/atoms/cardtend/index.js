@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardSong from '../cartsong';
+import CardSong from '../cardsong';
 import styles from './cardtend.module.scss'
 
 CardTend.propTypes = {

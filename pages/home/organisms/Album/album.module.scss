@@ -1,0 +1,15 @@
+.albumitems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title {
+  padding: 5px;
+  font-size: 26px;
+  color: purple;
+}
+
+.album {
+  margin-top: 20px;
+}

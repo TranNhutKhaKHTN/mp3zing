@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './tendingitem.module.scss'
+import styles from './cardalbum.module.scss'
 import { PlayCircleOutlined } from "@ant-design/icons"
 
-CardSong.propTypes = {
+CardAlbum.propTypes = {
 
 };
 
-function CardSong(props) {
+function CardAlbum(props) {
   const image = "https://vtv1.mediacdn.vn/thumb_w/650/2020/7/3/1061332173675372452476431818456362453126714o-1593780823287457624164-crop-1593780866985947628599.jpg"
 
   return (
@@ -27,4 +27,4 @@ function CardSong(props) {
   );
 }
 
-export default CardSong;
+export default CardAlbum;

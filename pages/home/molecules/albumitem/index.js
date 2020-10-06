@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './albumitem.module.scss'
-import CardSong from '../../atoms/cartsong';
+import CardSong from '../../atoms/cardsong';
+import CardAlbum from '../../atoms/cardalbum';
 
 AlbumItem.propTypes = {
 
@@ -9,8 +10,11 @@ AlbumItem.propTypes = {
 
 function AlbumItem(props) {
   return (
-    <div>
-      <CardSong styles={{ width: 190, height: 190 }}></CardSong>
+    <div className={styles.albumitem}>
+      <CardAlbum ></CardAlbum>
+      <div>
+        thông tin album
+      </div>
     </div >
   );
 }

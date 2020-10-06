@@ -1,0 +1,15 @@
+.description {
+  padding-left: 5px;
+  &:hover {
+    color: purple;
+    cursor: pointer;
+  }
+}
+
+.singer {
+  color: red;
+}
+
+.videoitem {
+  margin-top: 10px;
+}

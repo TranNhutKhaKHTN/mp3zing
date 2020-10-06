@@ -1,7 +1,7 @@
-$width: 60px;
-$height: 60px;
+$width: 150.5px;
+$height: 150.5px;
 .card {
-  margin: 5px;
+  // margin: 5px;
   cursor: pointer;
   width: $width;
   height: $height;
@@ -57,7 +57,7 @@ $height: 60px;
   justify-content: center;
   align-items: center;
   .play {
-    font-size: 20px;
+    font-size: 300%;
   }
   .heart {
     display: flex;

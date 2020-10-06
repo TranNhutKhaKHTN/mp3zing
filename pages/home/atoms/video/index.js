@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './tendingitem.module.scss'
+import styles from './video.module.scss'
 import { PlayCircleOutlined } from "@ant-design/icons"
 
-CardSong.propTypes = {
+Video.propTypes = {
 
 };
 
-function CardSong(props) {
-  const image = "https://vtv1.mediacdn.vn/thumb_w/650/2020/7/3/1061332173675372452476431818456362453126714o-1593780823287457624164-crop-1593780866985947628599.jpg"
+function Video(props) {
+  const image = "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/7/3/7/9/7379380330e0e795ce61bba271400506.jpg"
 
   return (
     <div className={styles.card} >
@@ -27,4 +27,4 @@ function CardSong(props) {
   );
 }
 
-export default CardSong;
+export default Video;

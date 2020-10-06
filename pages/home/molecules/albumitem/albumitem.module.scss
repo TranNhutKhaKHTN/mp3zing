@@ -1,0 +1,8 @@
+.albumitem {
+  margin: 5px;
+
+  &:hover {
+    color: purple;
+    cursor: pointer;
+  }
+}

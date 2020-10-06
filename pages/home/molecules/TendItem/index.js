@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardSong from '../../atoms/cartsong';
+import CardSong from '../../atoms/cardsong';
 import InforTend from '../../atoms/InforTend';
 import styles from './tenditem.module.scss'
 import CardTend from '../../atoms/cardtend';

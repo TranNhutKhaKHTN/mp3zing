@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 // import TendingItem from '../../atoms/cartsong';
-import CardSong from '../../atoms/cartsong';
+import CardSong from '../../atoms/cardsong';
 // import TendItem from '../../molecules/TendItem';
 import InforTend from '../../atoms/InforTend';
 import TendItem from '../../molecules/TendItem';
