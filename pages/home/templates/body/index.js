@@ -11,6 +11,9 @@ import VideoHot from '../../organisms/videohot';
 import ImgSong from '../../atoms/ImgSong';
 import ListNhac from '../../organisms/listnhac';
 import HotSinger from '../../organisms/hotsinger';
+import HotTopic from '../../organisms/hottopic';
+import TabSong from '../../organisms/tabsong';
+import img from './../../../../public/img.png'
 
 Body.propTypes = {
 
@@ -43,7 +46,9 @@ function Body(props) {
           </div>
         </div>
         <div className={styles.rightContent}>
-          <ImgSong size="XXL"></ImgSong>
+          <img src={img}></img>
+          <HotTopic></HotTopic>
+          <TabSong></TabSong>
         </div>
       </div>
     </div>

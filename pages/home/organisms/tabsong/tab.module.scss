@@ -1,0 +1,13 @@
+.tab {
+  margin-top: 20px;
+  .title {
+    font-size: 20px;
+    color: purple;
+  }
+}
+
+.tabname {
+  &:focus {
+    background-color: red;
+  }
+}

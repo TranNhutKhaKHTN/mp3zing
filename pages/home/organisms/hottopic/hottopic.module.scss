@@ -1,0 +1,13 @@
+.hottopic {
+  margin-top: 25px;
+}
+.title {
+  font-size: 26px;
+  color: purple;
+}
+
+.addition {
+  &::after {
+    content: ">";
+  }
+}

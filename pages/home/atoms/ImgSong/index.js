@@ -36,11 +36,11 @@ function ImgSong(props) {
   }
   if (props.size === "XXL") {
     size = styles.XXL;
-    icon = <div className={styles.icon}>haha</div>
+    icon = <div className={styles.icon}>tên nghệ sĩ</div>
   }
   if (props.size === "ML") {
     size = styles.ML;
-    icon = <div className={styles.icon}>haha</div>
+    icon = <div className={styles.icon}>tên nghệ sĩ</div>
   }
   return (
     <div className={size}>
