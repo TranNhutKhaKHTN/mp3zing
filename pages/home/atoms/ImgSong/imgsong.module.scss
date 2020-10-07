@@ -14,11 +14,13 @@
       transform: scale(1.1);
     }
 
-    // .icon {
-    //   -ms-transform: scale(1.1);
-    //   -webkit-transform: scale(1.2);
-    //   transform: scale(1.1);
-    // }
+    .icon {
+      // -ms-transform: scale(1.1);
+      // -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Safari 3-8 */
+      transform: scale(1);
+    }
 
     .opacity {
       opacity: 1;
@@ -33,7 +35,8 @@
 
 .icon {
   color: white;
-  // transform: transform 1s scale(0.5);
+  transition: transform 0.2s;
+  transform: scale(0);
 }
 
 .opacity {
@@ -91,6 +94,26 @@
   .imgsong {
     .icon {
       font-size: 300%;
+    }
+  }
+}
+
+.XXL {
+  width: 208px;
+  height: 210px;
+  .imgsong {
+    .icon {
+      font-size: 20px;
+    }
+  }
+}
+
+.ML {
+  width: 98px;
+  height: 100px;
+  .imgsong {
+    .icon {
+      font-size: 20px;
     }
   }
 }

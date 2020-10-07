@@ -37,3 +37,12 @@
     height: 10000px;
   }
 }
+
+.hotSong {
+  display: flex;
+  justify-content: space-between;
+  .verticalline {
+    border-left: 1px solid black;
+    height: 400px;
+  }
+}

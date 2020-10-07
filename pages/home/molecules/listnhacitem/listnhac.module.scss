@@ -1,3 +1,14 @@
 .listnhac {
   display: flex;
+  align-items: center;
+  &:hover {
+    .grIcon {
+      display: block;
+    }
+  }
+}
+
+.grIcon {
+  margin-left: 55px;
+  display: none;
 }

@@ -13,12 +13,14 @@ function ImgSong(props) {
     img = props.src;
   }
   else {
-    img = "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/8/1/e/f81efd92fa9a3d52eb37f3b867ab9d32.jpg"
+    img = "https://upload.wikimedia.org/wikipedia/vi/3/32/S%C6%A1n_T%C3%B9ng_M-TP_-_C%C3%B3_ch%E1%BA%AFc_y%C3%AAu_l%C3%A0_%C4%91%C3%A2y.jpg"
   }
   // const type = props.type;
   let size;
   let sizeIcon;
-  console.log(props.size);
+  let icon;
+  icon = <PlayCircleOutlined className={styles.icon}></PlayCircleOutlined>
+
   if (props.size === "M") {
     size = styles.M;
     sizeIcon = 20
@@ -32,12 +34,20 @@ function ImgSong(props) {
   if (props.size === "XL") {
     size = styles.XL;
   }
+  if (props.size === "XXL") {
+    size = styles.XXL;
+    icon = <div className={styles.icon}>haha</div>
+  }
+  if (props.size === "ML") {
+    size = styles.ML;
+    icon = <div className={styles.icon}>haha</div>
+  }
   return (
     <div className={size}>
       <div className={styles.imgsong}>
         <img className={styles.img} src={img}></img>
         <div className={styles.opacity} >
-          <PlayCircleOutlined className={styles.icon} />
+          {icon}
         </div>
       </div>
     </div>

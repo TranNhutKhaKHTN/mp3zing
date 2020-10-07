@@ -10,6 +10,7 @@ import Album from '../../organisms/Album';
 import VideoHot from '../../organisms/videohot';
 import ImgSong from '../../atoms/ImgSong';
 import ListNhac from '../../organisms/listnhac';
+import HotSinger from '../../organisms/hotsinger';
 
 Body.propTypes = {
 
@@ -30,11 +31,19 @@ function Body(props) {
             <VideoHot></VideoHot>
             <Album title="ALBUM HOT" icon=">"></Album>
 
-            <ListNhac></ListNhac>
+            <div className={styles.hotSong}>
+              <ListNhac></ListNhac>
+              <div className={styles.verticalline}></div>
+              <ListNhac></ListNhac>
+            </div>
+
+            <div style={{ marginTop: 20 }}>
+              <HotSinger></HotSinger>
+            </div>
           </div>
         </div>
         <div className={styles.rightContent}>
-          <ImgSong size="XL"></ImgSong>
+          <ImgSong size="XXL"></ImgSong>
         </div>
       </div>
     </div>
