@@ -8,6 +8,8 @@ import Tending from '../../organisms/Tending';
 import AlbumItem from '../../molecules/albumitem';
 import Album from '../../organisms/Album';
 import VideoHot from '../../organisms/videohot';
+import ImgSong from '../../atoms/ImgSong';
+import ListNhac from '../../organisms/listnhac';
 
 Body.propTypes = {
 
@@ -24,16 +26,15 @@ function Body(props) {
             <img src={chart} style={{ width: "100%" }}>
             </img>
             <Tending></Tending>
-
             <Album title="NIỀM VUI MỖI NGÀY"></Album>
-
             <VideoHot></VideoHot>
+            <Album title="ALBUM HOT" icon=">"></Album>
 
-            <Album title="ALBUM HOT"></Album>
+            <ListNhac></ListNhac>
           </div>
         </div>
         <div className={styles.rightContent}>
-
+          <ImgSong size="XL"></ImgSong>
         </div>
       </div>
     </div>

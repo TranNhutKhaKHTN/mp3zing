@@ -11,7 +11,7 @@ function Album(props) {
   return (
     <div className={styles.album}>
       <div className={styles.title}>
-        {props.title}
+        {props.title} {props.icon}
       </div>
       <div className={styles.albumitems}>
         <AlbumItem></AlbumItem>

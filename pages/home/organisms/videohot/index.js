@@ -12,7 +12,7 @@ function VideoHot(props) {
   return (
     <div className={styles.videohot}>
       <div className={styles.title}>
-        VIDEO HOT
+        VIDEO HOT 
         <RightOutlined />
       </div>
       <div className={styles.videohotitems}>

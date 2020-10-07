@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './infortend.module.scss'
-import { DownloadOutlined, PlusOutlined, ShareAltOutlined } from '@ant-design/icons'
+import ListIcon from '../listicon';
 
 InforTend.propTypes = {
 
@@ -17,9 +17,7 @@ function InforTend(props) {
         </div>
         <div>
           <span className={styles.grIcon}>
-            <DownloadOutlined className={styles.icon} />
-            <PlusOutlined className={styles.icon} />
-            <ShareAltOutlined className={styles.icon} />
+            <ListIcon></ListIcon>
           </span>
           <span className={styles.watch}>
             67.540

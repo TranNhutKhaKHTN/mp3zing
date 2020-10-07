@@ -28,7 +28,7 @@ function SlideShow(props) {
       if (i < 5 && i >= 0) {
         setIndex(i)
         curentIndex.current = i
-        console.log(i)
+        // console.log(i)
       }
       else {
         setIndex(0)

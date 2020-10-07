@@ -3,5 +3,21 @@
 }
 
 .information {
-  padding-top: 5px;
+  padding-top: 2px;
+  margin-left: 7px;
+}
+
+.title {
+  cursor: pointer;
+  &:hover {
+    color: purple;
+  }
+}
+
+.singer {
+  color: #9e9e9e;
+  cursor: pointer;
+  &:hover {
+    color: purple;
+  }
 }

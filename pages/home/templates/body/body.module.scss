@@ -1,15 +1,38 @@
+// .bodyContent1 {
+//   display: flex;
+//   margin-top: 15px;
+//   .leftContent {
+//     width: 70%;
+//     // background-color: yellow;
+//     height: 10000px;
+//     margin-right: 15px;
+//   }
+
+//   .rightContent {
+//     width: 30%;
+//     background-color: yellowgreen;
+//     height: 10000px;
+//   }
+// }
 .bodyContent1 {
-  display: flex;
+  display: grid;
+  grid-template-columns: 15% 55% 15% 15%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+
   margin-top: 15px;
   .leftContent {
-    width: 70%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    // width: 70%;
     // background-color: yellow;
     height: 10000px;
     margin-right: 15px;
   }
 
   .rightContent {
-    width: 30%;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    //width: 30%;
     background-color: yellowgreen;
     height: 10000px;
   }

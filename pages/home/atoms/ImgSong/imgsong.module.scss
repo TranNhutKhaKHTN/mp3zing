@@ -1,0 +1,100 @@
+.imgsong {
+  // margin: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  overflow: hidden;
+
+  &:hover {
+    .img {
+      -ms-transform: scale(1.1); /* IE 9 */
+      -webkit-transform: scale(1.2); /* Safari 3-8 */
+      transform: scale(1.1);
+    }
+
+    // .icon {
+    //   -ms-transform: scale(1.1);
+    //   -webkit-transform: scale(1.2);
+    //   transform: scale(1.1);
+    // }
+
+    .opacity {
+      opacity: 1;
+    }
+  }
+}
+.img {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+}
+
+.icon {
+  color: white;
+  // transform: transform 1s scale(0.5);
+}
+
+.opacity {
+  // //<css-of-icon>
+  // font-size: 150%;
+  // color: white;
+  // //</css-of-icon>
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(72, 72, 72, 0.7);
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.S {
+  width: 50px;
+  height: 50px;
+  .imgsong {
+    .icon {
+      font-size: 120%;
+    }
+  }
+}
+
+.M {
+  width: 60px;
+  height: 60px;
+  .imgsong {
+    .icon {
+      font-size: 150%;
+    }
+  }
+}
+
+.L {
+  width: 110px;
+  height: 110px;
+  .imgsong {
+    .icon {
+      font-size: 250%;
+    }
+  }
+}
+
+.XL {
+  width: 150.5px;
+  height: 150.5px;
+  .imgsong {
+    .icon {
+      font-size: 300%;
+    }
+  }
+}
+
+.shape {
+  width: 100px;
+}
