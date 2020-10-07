@@ -8,6 +8,7 @@ InforTend.propTypes = {
 };
 
 function InforTend(props) {
+  const { data } = props
   return (
     <div className={styles.infortend}>
       <div></div>

@@ -10,7 +10,7 @@ ListTabSong.propTypes = {
 };
 
 function ListTabSong(props) {
-  const image = "https://photo-zmp3.zadn.vn/banner/3/0/6/8/3068a4e198cb63856ce698865194d74d.jpg"
+
   return (
     <div>
       <TopItemTab></TopItemTab>

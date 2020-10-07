@@ -1,6 +1,9 @@
 .listnhac {
   display: flex;
   align-items: center;
+  width: 320px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   &:hover {
     .grIcon {
       display: block;
@@ -9,6 +12,11 @@
 }
 
 .grIcon {
-  margin-left: 55px;
+  margin-left: 10px;
   display: none;
+}
+
+.card {
+  width: 221px;
+  overflow: hidden;
 }

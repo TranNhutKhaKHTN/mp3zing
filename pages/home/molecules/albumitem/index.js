@@ -10,11 +10,12 @@ AlbumItem.propTypes = {
 };
 
 function AlbumItem(props) {
+  const data = props.data
   return (
     <div className={styles.albumitem}>
-      <ImgSong size="XL"></ImgSong>
+      <ImgSong size="XL" data={data}></ImgSong>
       <div className={styles.title}>
-        thông tin album
+        {data.song}
       </div>
     </div >
   );

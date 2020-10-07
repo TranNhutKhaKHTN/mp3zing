@@ -4,11 +4,11 @@ import { Tabs } from 'antd';
 import styles from './tab.module.scss'
 import ListTabSong from '../../molecules/listtabsong';
 
-Tab.propTypes = {
+TabSong.propTypes = {
 
 };
 
-function Tab(props) {
+function TabSong(props) {
   const { TabPane } = Tabs
   const tab1 = <div className={styles.tabname}>Việt Nam</div>
   const tab2 = <div className={styles.tabname}>US/UK</div>
@@ -33,4 +33,4 @@ function Tab(props) {
   );
 }
 
-export default Tab;
+export default TabSong;

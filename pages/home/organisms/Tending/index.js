@@ -49,7 +49,7 @@ function Tending(props) {
     return (
       <div key={index}>
         <TendItem data={data}></TendItem>
-        {index === 4 ? null : <hr></hr>}
+        {index === 4 ? null : <div className={styles.horizontalline}></div>}
       </div>
     )
   })

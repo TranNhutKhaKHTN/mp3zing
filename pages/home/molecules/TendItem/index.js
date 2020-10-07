@@ -10,8 +10,9 @@ TendItem.propTypes = {
 };
 
 function TendItem(props) {
+
   const { data } = props;
-  console.log(data);
+  // console.log(data)
   return (
     <div className={styles.tenditem}>
       <div className={styles.leftItem}>
@@ -19,10 +20,10 @@ function TendItem(props) {
           {data.index}
         </div>
         <div className={styles.content}></div>
-        <CardTend size="M" src={data.image} />
+        <CardTend size="M" data={data} />
       </div>
       <div className={styles.rigntItem}>
-        <InforTend></InforTend>
+        <InforTend data={data}></InforTend>
       </div>
     </div>
   );

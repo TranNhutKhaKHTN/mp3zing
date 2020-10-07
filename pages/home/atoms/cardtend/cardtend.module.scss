@@ -1,5 +1,6 @@
 .cardtend {
   display: flex;
+  width: 290px;
 }
 
 .information {
@@ -9,6 +10,8 @@
 
 .title {
   cursor: pointer;
+  height: 20px;
+  text-overflow: ellipsis;
   &:hover {
     color: purple;
   }
@@ -16,6 +19,7 @@
 
 .singer {
   color: #9e9e9e;
+  font-size: 12px;
   cursor: pointer;
   &:hover {
     color: purple;

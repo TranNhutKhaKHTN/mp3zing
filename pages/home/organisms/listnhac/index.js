@@ -9,26 +9,21 @@ ListNhac.propTypes = {
 };
 
 function ListNhac(props) {
+  const datas = props.datas;
+  const ListNhac = datas.map((data, index) => {
+    return (
+      <div key={index}>
+        <ListNhacItem data={data} ></ListNhacItem>
+        {index < 9 ? <div className={styles.horizontalline}></div> : null}
+      </div>
+    )
+  })
   return (
     <div className={styles.listnhac}>
       <div className={styles.title}>
         NHAC VIỆT HOT
       </div>
-      <ListNhacItem></ListNhacItem>
-      <hr></hr>
-      <ListNhacItem></ListNhacItem>
-      <hr></hr>
-      <ListNhacItem></ListNhacItem>
-      <hr></hr>
-      <ListNhacItem></ListNhacItem>
-      <hr></hr>
-      <ListNhacItem></ListNhacItem>
-      <hr></hr>
-      <ListNhacItem></ListNhacItem>
-      <hr></hr>
-      <ListNhacItem></ListNhacItem>
-      <hr></hr>
-      <ListNhacItem></ListNhacItem>
+      {ListNhac}
     </div>
   );
 }

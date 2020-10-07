@@ -9,14 +9,15 @@ CardTend.propTypes = {
 };
 
 function CardTend(props) {
-
+  const data = props.data
+  // console.log(props)
   const size = props.size
   return (
     <div className={styles.cardtend}>
-      <ImgSong src={props.src} size={size}></ImgSong>
+      <ImgSong size={size} data={data}></ImgSong>
       <div className={styles.information}>
-        <div className={styles.title}>Có Chắc Yêu Là Đây</div>
-        <div className={styles.singer}>Sơn Tùng MTP</div>
+        <div className={styles.title}>{data.song}</div>
+        <div className={styles.singer}>{data.singer}</div>
       </div>
     </div>
   );

@@ -8,20 +8,20 @@ Album.propTypes = {
 };
 
 function Album(props) {
+
+  const datas = props.datas
+  const ListAlbum = datas.map((data, index) => {
+    return (
+      <AlbumItem key={index} data={data}></AlbumItem>
+    )
+  })
   return (
     <div className={styles.album}>
       <div className={styles.title}>
         {props.title} {props.icon}
       </div>
       <div className={styles.albumitems}>
-        <AlbumItem></AlbumItem>
-        <AlbumItem></AlbumItem>
-        <AlbumItem></AlbumItem>
-        <AlbumItem></AlbumItem>
-        <AlbumItem></AlbumItem>
-        <AlbumItem></AlbumItem>
-        <AlbumItem></AlbumItem>
-        <AlbumItem></AlbumItem>
+        {ListAlbum}
       </div>
     </div>
   );

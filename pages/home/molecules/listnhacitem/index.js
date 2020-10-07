@@ -12,7 +12,9 @@ ListNhacItem.propTypes = {
 function ListNhacItem(props) {
   return (
     <div className={styles.listnhac}>
-      <CardTend size="S"></CardTend>
+      <div className={styles.card}>
+        <CardTend size="S" data={props.data}></CardTend>
+      </div>
       <div className={styles.grIcon}>
         <ListIcon></ListIcon>
       </div>
