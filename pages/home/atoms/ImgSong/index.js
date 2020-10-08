@@ -49,6 +49,9 @@ function ImgSong(props) {
   if (props.size === "Smallrectangle") {
     size = styles.Smallrectangle;
   }
+  if (props.size === "RaM") {
+    size = styles.RaM;
+  }
 
   return (
     <div className={size}>

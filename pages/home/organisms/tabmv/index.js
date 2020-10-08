@@ -12,7 +12,7 @@ TabMV.propTypes = {
 function TabMV(props) {
   const data = props.data
   //MV có 3 tab cần 3 bộ data
-  console.log(data);
+  // console.log(data);
   const { TabPane } = Tabs
   const tab1 = <div className={styles.tabname}>Việt Nam</div>
   const tab2 = <div className={styles.tabname}>US/UK</div>

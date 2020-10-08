@@ -18,7 +18,7 @@ function TabSongItem(props) {
   }
 
   const data = props.data
-  console.log(data);
+  // console.log(data);
   return (
     <div className={styles.tabsong} style={{ color: color }}>
       <div className={styles.rank}>

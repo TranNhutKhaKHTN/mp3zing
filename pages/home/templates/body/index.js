@@ -17,6 +17,7 @@ import img from './../../../../public/img.png'
 import TabMvItem from '../../atoms/tabmvitem';
 import TabMV from '../../organisms/tabmv';
 import TabAlbum from '../../organisms/tabalbum';
+import MusicNews from '../../organisms/musicnews';
 
 Body.propTypes = {
 
@@ -298,7 +299,7 @@ function Body(props) {
           <TabSong></TabSong>
           <TabMV sizeimage="Smallrectangle" data={tabMV}></TabMV>
           <TabMV sizeimage="L" data={tabAlbum}></TabMV>
-          {/* <TabAlbum></TabAlbum> */}
+          <MusicNews></MusicNews>
         </div>
       </div>
     </div>

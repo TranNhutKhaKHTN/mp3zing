@@ -11,16 +11,16 @@ ListTabSong.propTypes = {
 
 function ListTabSong(props) {
   const datas = props.data;
-  console.log(props);
+  // console.log(props);
   const tabitems = datas.map((data, index) => {
     if (index > 0) {
-      return <div>
+      return <div key={index}>
         <TabSongItem data={data}></TabSongItem>
         {index < 9 ? <div className={styles.horizontalline}></div> : null}
       </div>
     }
     else {
-      <div>
+      <div key={index}>
         <TopItemTab data={data}></TopItemTab>
         {index < 9 ? <div className={styles.horizontalline}></div> : null}
       </div>

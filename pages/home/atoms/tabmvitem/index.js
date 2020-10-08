@@ -9,12 +9,14 @@ TabMvItem.propTypes = {
 };
 
 function TabMvItem(props) {
-  console.log(props)
+  // console.log(props)
   const data = props.data
   return (
     <div className={styles.tabmvitem}>
 
-      <ImgSong size={props.sizeimage} data={data}></ImgSong>
+      <div className={styles.imgsong}>
+        <ImgSong size={props.sizeimage} data={data}></ImgSong>
+      </div>
       <div className={styles.infor}>
         <SingerSong data={data}></SingerSong>
         <div>
