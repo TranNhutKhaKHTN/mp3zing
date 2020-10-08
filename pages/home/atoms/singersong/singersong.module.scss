@@ -1,6 +1,10 @@
 .song {
   text-overflow: ellipsis;
+  // width: 170px;
+  height: 25px;
   cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
   &:hover {
     color: purple;
   }
@@ -9,4 +13,11 @@
 .singer {
   cursor: pointer;
   color: #9e9e9e;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  // width: 170px;
+}
+
+.singersong {
+  width: 185px;
 }

@@ -16,17 +16,20 @@ function TabSongItem(props) {
   else {
     color = "black"
   }
+
+  const data = props.data
+  console.log(data);
   return (
     <div className={styles.tabsong} style={{ color: color }}>
       <div className={styles.rank}>
-        <span>01</span>
-        <SingerSong></SingerSong>
+        <span>{data.rank}</span>
+        <SingerSong data={data}></SingerSong>
       </div>
       <div className={styles.grIcon}>
         <ListIcon></ListIcon>
       </div>
       <div className={styles.watch}>
-        2192
+        {data.watch}
       </div>
     </div>
   );

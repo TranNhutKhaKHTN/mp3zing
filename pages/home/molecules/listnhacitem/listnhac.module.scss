@@ -4,6 +4,8 @@
   width: 320px;
   margin-top: 5px;
   margin-bottom: 5px;
+
+  cursor: pointer;
   &:hover {
     .grIcon {
       display: block;
@@ -19,4 +21,5 @@
 .card {
   width: 221px;
   overflow: hidden;
+  cursor: pointer;
 }

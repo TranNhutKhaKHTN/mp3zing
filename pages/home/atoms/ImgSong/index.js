@@ -21,6 +21,9 @@ function ImgSong(props) {
   let sizeIcon;
   let icon;
   icon = <PlayCircleOutlined className={styles.icon}></PlayCircleOutlined>
+  if (props.singer) {
+    icon = <div className={styles.icon} style={{ fontSize: 14 }}>{props.singer}</div>
+  }
 
   if (props.size === "M") {
     size = styles.M;
@@ -37,11 +40,11 @@ function ImgSong(props) {
   }
   if (props.size === "XXL") {
     size = styles.XXL;
-    icon = <div className={styles.icon}>tên nghệ sĩ</div>
+
   }
   if (props.size === "ML") {
     size = styles.ML;
-    icon = <div className={styles.icon}>tên nghệ sĩ</div>
+
   }
   if (props.size === "Smallrectangle") {
     size = styles.Smallrectangle;
