@@ -8,14 +8,14 @@ NewItem.propTypes = {
 };
 
 function NewItem(props) {
-
+  // console.log(data);
   return (
     <div className={styles.newsitem}>
       <div className={styles.imgsong}>
-        <ImgSong size="RaM"></ImgSong>
+        <ImgSong size="RaM" data={props.data}></ImgSong>
       </div>
       <div className={styles.title}>
-        Gil Lê tiến bộ rõ rệt trong sản phẩm mới
+        {props.data.title}
       </div>
     </div>
   );

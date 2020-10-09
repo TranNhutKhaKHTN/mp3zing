@@ -19,7 +19,7 @@ function TabSong(props) {
       rank: 1,
       song: "Hoa Hải Đường",
       singer: "Jack",
-      image: "",
+      image: "https://photo-zmp3.zadn.vn/banner/3/0/6/8/3068a4e198cb63856ce698865194d74d.jpg",
       watch: 1111
     },
     {

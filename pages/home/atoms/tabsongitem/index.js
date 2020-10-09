@@ -23,7 +23,9 @@ function TabSongItem(props) {
     <div className={styles.tabsong} style={{ color: color }}>
       <div className={styles.rank}>
         <span>{data.rank}</span>
-        <SingerSong data={data}></SingerSong>
+        <div className={styles.singersong}>
+          <SingerSong data={data}></SingerSong>
+        </div>
       </div>
       <div className={styles.grIcon}>
         <ListIcon></ListIcon>

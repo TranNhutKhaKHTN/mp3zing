@@ -20,10 +20,12 @@ function ListTabSong(props) {
       </div>
     }
     else {
-      <div key={index}>
-        <TopItemTab data={data}></TopItemTab>
-        {index < 9 ? <div className={styles.horizontalline}></div> : null}
-      </div>
+      return (
+        <div key={index}>
+          <TopItemTab data={data}></TopItemTab>
+          {index < 9 ? <div className={styles.horizontalline}></div> : null}
+        </div>
+      )
     }
   })
 

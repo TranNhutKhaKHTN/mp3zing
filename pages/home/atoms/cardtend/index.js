@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardSong from '../cardsong';
 import styles from './cardtend.module.scss'
 import ImgSong from '../ImgSong';
+import SingerSong from '../singersong';
 
 CardTend.propTypes = {
 
@@ -16,8 +16,7 @@ function CardTend(props) {
     <div className={styles.cardtend}>
       <ImgSong size={size} data={data}></ImgSong>
       <div className={styles.information}>
-        <div className={styles.title}>{data.song}</div>
-        <div className={styles.singer}>{data.singer}</div>
+        <SingerSong data={data}></SingerSong>
       </div>
     </div>
   );
