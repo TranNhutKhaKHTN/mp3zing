@@ -1,0 +1,17 @@
+.footerinfor {
+  background-color: #222428;
+  width: 1050px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .center {
+    display: flex;
+    color: white;
+  }
+}
+
+.footer {
+  background-color: #222428;
+  display: flex;
+  justify-content: center;
+}

@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import Header from './templates/header';
 import Body from './templates/body';
 import styles from './home.module.scss'
+import Footer from './templates/footer';
 
-Home.propTypes = {
-
-};
-
-function Home(props) {
+const Home: React.FC = (props) => {
   return (
     <div>
       <Header></Header>
@@ -17,6 +14,7 @@ function Home(props) {
           <Body></Body>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

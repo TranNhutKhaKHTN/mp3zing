@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ImgSong from '../../atoms/ImgSong';
 import styles from './hotsinger.module.scss'
+import ImgSong from '../../atoms/ImgSong';
 
 
 

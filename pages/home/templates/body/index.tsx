@@ -17,6 +17,7 @@ import img from './../../../../public/img.png'
 import TabMvItem from '../../atoms/tabmvitem';
 import TabMV from '../../organisms/tabmv';
 import MusicNews from '../../organisms/musicnews';
+import DoiTac from '../../atoms/doitac';
 
 Body.propTypes = {
 
@@ -270,6 +271,7 @@ function Body(props) {
   return (
     <div>
       <AD></AD>
+
       <div className={styles.bodyContent1}>
         <div className={styles.leftContent}>
           <div>
@@ -292,6 +294,7 @@ function Body(props) {
             </div>
           </div>
         </div>
+
         <div className={styles.rightContent}>
           <img src={img}></img>
           <HotTopic></HotTopic>
@@ -300,7 +303,10 @@ function Body(props) {
           <TabMV sizeimage="L" data={tabAlbum}></TabMV>
           <MusicNews></MusicNews>
         </div>
+
       </div>
+
+      <DoiTac></DoiTac>
     </div>
   );
 }
