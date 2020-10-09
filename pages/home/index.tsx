@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './templates/header';
-import Body from './templates/body';
+import BodyHome from './templates/bodyhome';
 import styles from './home.module.scss'
 import Footer from './templates/footer';
 
@@ -11,7 +11,7 @@ const Home: React.FC = (props) => {
       <Header></Header>
       <div className={styles.body}>
         <div className={styles.bodyContent}>
-          <Body></Body>
+          <BodyHome></BodyHome>
         </div>
       </div>
       <Footer></Footer>

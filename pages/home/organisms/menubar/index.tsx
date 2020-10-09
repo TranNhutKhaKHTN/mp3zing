@@ -3,17 +3,22 @@ import PropTypes from 'prop-types';
 import styles from './menubar.module.scss'
 import { HomeOutlined, PoweroffOutlined, CloudUploadOutlined } from '@ant-design/icons'
 import ZingChart from '../../molecules/zingchart';
+import { useRouter } from 'next/router';
 
 
 
 const Menubar: React.FC = (props) => {
+  const router = useRouter()
+  const redirectPlay = () => {
+    router.push("/playmusic")
+  }
   return (
     <div className={styles.menu}>
       <div className={styles.items}>
         <ul>
           <span><HomeOutlined /></span>
           <div className={styles.item}>
-            <div>
+            <div onClick={redirectPlay}>
               Nhạc Cá Nhân
             </div>
           </div>

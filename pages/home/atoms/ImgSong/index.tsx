@@ -62,6 +62,9 @@ const ImgSong: React.FC<Props> = (props: Props) => {
   if (props.size === "RaL") {
     size = styles.RaL;
   }
+  if (props.size === "XLL") {
+    size = styles.XLL;
+  }
 
   return (
     <div className={size}>

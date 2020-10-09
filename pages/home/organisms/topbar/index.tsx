@@ -3,15 +3,20 @@ import logo from './../../../../public/logo.png'
 import { Layout, Menu } from 'antd';
 import styles from './topbar.module.scss'
 import SearchTool from '../../molecules/searchtool';
+import { useRouter } from 'next/router';
 
 
 const TopBar: React.FC = (props) => {
   const { Header } = Layout;
+  const route = useRouter()
+  const clickLogo = () => {
+    route.push("/home")
+  }
   return (
     <div>
       <Header style={{ height: 50 }}>
         <div className={styles.header}>
-          <img src={logo}></img>
+          <img src={logo} onClick={clickLogo}></img>
           <Menu theme="dark" mode="horizontal" className={styles.menu} defaultSelectedKeys={['2']}>
             <SearchTool></SearchTool>
             <Menu.Item key="1">MP3</Menu.Item>

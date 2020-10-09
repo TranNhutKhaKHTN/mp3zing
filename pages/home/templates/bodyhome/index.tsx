@@ -19,11 +19,7 @@ import TabMV from '../../organisms/tabmv';
 import MusicNews from '../../organisms/musicnews';
 import DoiTac from '../../atoms/doitac';
 
-Body.propTypes = {
-
-};
-
-function Body(props) {
+const BodyHome: React.FC = (props) => {
   const datas = [
     {
       image: "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/9/9/6/c/996c529742d9f2101ef58790da95c27d.jpg",
@@ -311,4 +307,4 @@ function Body(props) {
   );
 }
 
-export default Body;
+export default BodyHome;
