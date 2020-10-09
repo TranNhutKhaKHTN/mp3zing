@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './musicnews.module.scss';
 import ListNews from '../../molecules/listnews';
+import Title from '../../atoms/title';
+// import styles from './musicnews.module.scss'
 
 MusicNews.propTypes = {
 
@@ -9,9 +11,9 @@ MusicNews.propTypes = {
 
 function MusicNews(props) {
   return (
-    <div>
-      <div>
-        TIN TỨC ẤM NHẠC
+    <div className={styles.news}>
+      <div className={styles.title}>
+        TIN TỨC ÂM NHẠC
       </div>
       <ListNews></ListNews>
     </div>

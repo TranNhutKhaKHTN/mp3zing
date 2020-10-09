@@ -3,12 +3,17 @@
   &:hover {
     color: purple;
     cursor: pointer;
+    .title {
+      color: purple;
+    }
   }
 }
 
 .singer {
+  cursor: pointer;
   color: #9788a7;
   width: 120px;
+  font-size: 11px;
 }
 
 .videoitem {
@@ -21,4 +26,5 @@
 
 .title {
   width: 120px;
+  cursor: pointer;
 }

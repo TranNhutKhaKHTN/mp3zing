@@ -3,11 +3,6 @@
   .title {
     font-size: 20px;
     color: purple;
-  }
-}
-
-.tabname {
-  &:focus {
-    background-color: red;
+    margin-bottom: 20px;
   }
 }
