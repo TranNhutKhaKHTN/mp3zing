@@ -1,0 +1,14 @@
+.listcart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  b {
+    font-size: 25px;
+  }
+}

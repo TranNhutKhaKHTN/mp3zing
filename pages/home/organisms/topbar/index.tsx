@@ -16,7 +16,7 @@ const TopBar: React.FC = (props) => {
     <div>
       <Header style={{ height: 50 }}>
         <div className={styles.header}>
-          <img src={logo} onClick={clickLogo}></img>
+          <img src={logo} onClick={clickLogo} style={{ cursor: "pointer" }}></img>
           <Menu theme="dark" mode="horizontal" className={styles.menu} defaultSelectedKeys={['2']}>
             <SearchTool></SearchTool>
             <Menu.Item key="1">MP3</Menu.Item>

@@ -8,7 +8,7 @@ import { PlayCircleOutlined } from '@ant-design/icons'
 // };
 
 type Props = {
-  imgae?: string,
+  image?: string,
   data?: any,
   singer?: any,
   size?: string
@@ -32,38 +32,74 @@ const ImgSong: React.FC<Props> = (props: Props) => {
   if (props.singer) {
     icon = <div className={styles.icon} style={{ fontSize: 14 }}>{props.singer}</div>
   }
-  if (props.size === "M") {
-    size = styles.M;
-    sizeIcon = 20
-  }
-  if (props.size === "S") {
-    size = styles.S;
-  }
-  if (props.size === "L") {
-    size = styles.L;
-  }
-  if (props.size === "XL") {
-    size = styles.XL;
-  }
-  if (props.size === "XXL") {
-    size = styles.XXL;
+  // if (props.size === "M") {
+  //   size = styles.M;
+  //   sizeIcon = 20
+  // }
+  // if (props.size === "S") {
+  //   size = styles.S;
+  // }
+  // if (props.size === "L") {
+  //   size = styles.L;
+  // }
+  // if (props.size === "XL") {
+  //   size = styles.XL;
+  // }
+  // if (props.size === "XXL") {
+  //   size = styles.XXL;
 
-  }
-  if (props.size === "ML") {
-    size = styles.ML;
+  // }
+  // if (props.size === "ML") {
+  //   size = styles.ML;
 
-  }
-  if (props.size === "Smallrectangle") {
-    size = styles.Smallrectangle;
-  }
-  if (props.size === "RaM") {
-    size = styles.RaM;
-  }
-  if (props.size === "RaL") {
-    size = styles.RaL;
-  }
-  if (props.size === "XLL") {
-    size = styles.XLL;
+  // }
+  // if (props.size === "Smallrectangle") {
+  //   size = styles.Smallrectangle;
+  // }
+  // if (props.size === "RaM") {
+  //   size = styles.RaM;
+  // }
+  // if (props.size === "RaL") {
+  //   size = styles.RaL;
+  // }
+  // if (props.size === "XLL") {
+  //   size = styles.XLL;
+  // }
+
+  switch (props.size) {
+    case "S":
+      size = styles.S
+      break
+    case "M":
+      size = styles.M
+      break
+    case "L":
+      size = styles.L
+      break
+    case "XL":
+      size = styles.XL
+      break
+    case "XXL":
+      size = styles.XXL
+      break
+    case "ML":
+      size = styles.ML
+      break
+    case "Smallrectangle":
+      size = styles.Smallrectangle
+      break
+    case "RaM":
+      size = styles.RaM
+      break
+    case "RaL":
+      size = styles.RaL
+      break
+    case "XLL":
+      size = styles.XLL
+      break
+    case "C":
+      size = styles.C
+      break
   }
 
   return (

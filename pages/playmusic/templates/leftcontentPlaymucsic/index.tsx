@@ -12,10 +12,15 @@ const LeftContentPlayMucsic: React.FC = (props) => {
     const quay = !roll;
     setRoll(quay)
   }
+
+  const dataleftcontent = {
+    image: "https://photo-playlist-zmp3.zadn.vn/radio?src=HavwqN7EzbiAHZUTDj-sJ40CDyesrRORLmWgdM_MiXe7ModBRe6rJWSBAybgWx4Q2rahcZ7Ju0G2I2cMTu7pGrOUVyajlRuOL1xn4gwSVsPdiM4tXSUXu29z&size=thumb/240_240"
+  }
+
   return (
     <div className={styles.content}>
       <div className={roll ? styles.imgsongroll : styles.imgsong}>
-        <ImgSong size="XLL"></ImgSong>
+        <ImgSong size="XLL" data={dataleftcontent}></ImgSong>
       </div>
       <div className={styles.title}>
         <b>Radio Hoa Hải Đường</b>

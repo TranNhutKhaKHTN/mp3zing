@@ -1,0 +1,23 @@
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #a0a0a0;
+  cursor: pointer;
+
+  // &:hover {
+  //   background-color: red;
+  // }
+}
+
+.leftline {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imgsong {
+  overflow: hidden;
+  border-radius: 5px;
+}
