@@ -12,10 +12,9 @@ const PlayMusic: React.FC = (props) => {
       <div className={styles.body}>
         <div className={styles.bodyContent}>
           <BodyPlay></BodyPlay>
-          <Footer></Footer>
         </div>
       </div>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 }

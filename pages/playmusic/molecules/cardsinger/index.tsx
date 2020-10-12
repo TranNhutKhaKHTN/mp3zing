@@ -1,19 +1,31 @@
 import { UserAddOutlined } from '@ant-design/icons';
+import { type } from 'os';
 import React from 'react';
 import ImgSong from '../../../home/atoms/ImgSong';
 import styles from './cardsinger.module.scss'
 
-const CardSinger: React.FC = (props) => {
+interface Cardsinger {
+  image: string;
+  care: number;
+  singer: string;
+}
+
+type Props = {
+  data: Cardsinger
+}
+
+const CardSinger: React.FC<Props> = (props) => {
+  const data = props.data
   return (
     <div className={styles.cardsinger}>
       <div className={styles.imgsinger}>
-        <ImgSong size="C"></ImgSong>
+        <ImgSong size="C" data={data}></ImgSong>
       </div>
 
       <div className={styles.grinfor}>
-        <div className={styles.singer}>Sơn Tùng MTP</div>
+        <div className={styles.singer}><b>{data.singer}</b></div>
         <div className={styles.quantam}>
-          461k quan tâm
+          {data.care}k quan tâm
         </div>
       </div>
 

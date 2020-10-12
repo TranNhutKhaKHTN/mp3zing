@@ -3,7 +3,23 @@ import React from 'react';
 import CardSinger from '../../molecules/cardsinger';
 import styles from './listcardsinger.module.scss'
 
-const ListCardSinger: React.FC = (props) => {
+interface Cardsinger {
+  image: string;
+  care: number;
+  singer: string;
+}
+
+type Props = {
+  data: Cardsinger[]
+}
+
+const ListCardSinger: React.FC<Props> = (props) => {
+  const datas = props.data
+  const listcardsinger = datas.map((data, index) => {
+    return (
+      <CardSinger data={data}></CardSinger>
+    )
+  })
   return (
     <div>
       <div className={styles.title}>
@@ -15,10 +31,7 @@ const ListCardSinger: React.FC = (props) => {
       </div>
 
       <div className={styles.listcart}>
-        <CardSinger></CardSinger>
-        <CardSinger></CardSinger>
-        <CardSinger></CardSinger>
-        <CardSinger></CardSinger>
+        {listcardsinger}
       </div>
     </div>
   );

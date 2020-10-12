@@ -1,25 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ListItemBoxSlide from '../../molecules/listItemBoxslide';
 import styles from './boxslide.module.scss'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
-BoxSlide.propTypes = {
+interface boxslide {
+  image: string;
+  title: string;
+}
+type Props = {
+  data: boxslide[],
+  title: string
+}
 
-};
-
-function BoxSlide(props) {
+const BoxSlide: React.FC<Props> = (props) => {
+  const data = props.data;
+  const title = props.title
   return (
-    <div>
+    <div className={styles.boxslide}>
       <div className={styles.title}>
-        <b>title</b>
+        <b>{title}</b>
         <div className={styles.gricon}>
           <LeftOutlined />
           <RightOutlined />
         </div>
       </div>
       <div>
-        <ListItemBoxSlide></ListItemBoxSlide>
+        <ListItemBoxSlide data={data}></ListItemBoxSlide>
       </div>
     </div>
   );

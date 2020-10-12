@@ -14,40 +14,18 @@ type Props = {
 }
 
 const ListLinePlayMusic: React.FC<Props> = (props) => {
+  const datas = props.data;
+  const listLine = datas.map((data, index) => {
+    return (
+      <div key={index}>
+        <LineMusicPlay data={data}></LineMusicPlay>
+        <div className={styles.horizontalline}></div>
+      </div>
+    )
+  })
   return (
     <div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
-      <LineMusicPlay></LineMusicPlay>
-      <div className={styles.horizontalline}></div>
+      {listLine}
     </div>
   );
 }

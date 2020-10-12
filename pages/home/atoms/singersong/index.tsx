@@ -7,12 +7,12 @@ import styles from './singersong.module.scss'
 // };
 
 type Props = {
-  data: any
+  data?: any
 }
 
 const SingerSong: React.FC<Props> = (props) => {
-  let song
-  let singer
+  let song: string
+  let singer: string
   const data = props.data
   if (props.data) {
     song = data.song
