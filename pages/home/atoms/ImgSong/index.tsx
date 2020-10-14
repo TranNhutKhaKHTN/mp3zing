@@ -3,18 +3,14 @@ import PropTypes from 'prop-types';
 import styles from './imgsong.module.scss'
 import { PlayCircleOutlined } from '@ant-design/icons'
 
-// ImgSong.propTypes = {
-
-// };
-
 type Props = {
   image?: string,
   data?: any,
   singer?: any,
-  size?: string
+  size?: string,
 }
 
-const ImgSong: React.FC<Props> = (props: Props) => {
+const ImgSong: React.FC<Props> = (props) => {
   let img: string;
   const data = props.data;
 

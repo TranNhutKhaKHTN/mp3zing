@@ -4,9 +4,10 @@
   align-items: center;
   flex-direction: column;
 
-  position: fixed;
-  // top: 102px;
-  // bottom: 100px;
+  //position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
 }
 
 .title {

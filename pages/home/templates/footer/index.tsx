@@ -32,7 +32,7 @@ const Footer: React.FC = (props) => {
           </ul>
         </div>
         <div>
-          <img src={rfooter}></img>
+          <img alt={""} src={rfooter}></img>
         </div>
       </div>
     </div>

@@ -27,11 +27,11 @@ const LineMusicPlay: React.FC<Props> = (props) => {
           <ImgSong size="S" data={data}></ImgSong>
         </div>
         <div className={styles.singersong}>
+          <div className={styles.song}>
+            {data.song}
+          </div>
           <div className={styles.singer}>
             {data.singer}
-          </div>
-          <div>
-            {data.song}
           </div>
         </div>
       </div>

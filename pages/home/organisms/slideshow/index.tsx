@@ -34,7 +34,7 @@ const SlideShow: React.FC = (props) => {
     return () => clearInterval(loop);
   }, [index]);
 
-  const handlerHover = (index) => {
+  const handlerHover = (index: number) => {
     setIndex(index)
   }
 
