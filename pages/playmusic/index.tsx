@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../home/templates/header';
+import Header from '../../containers/home/templates/header';
 import styles from './playmusic.module.scss'
-import Footer from '../home/templates/footer';
-import BodyPlay from './templates/bodyPlay';
+import Footer from '../../containers/home/templates/footer';
+import BodyPlay from './../../containers/playmusic/templates/bodyPlay';
 
 const PlayMusic: React.FC = () => {
   return (

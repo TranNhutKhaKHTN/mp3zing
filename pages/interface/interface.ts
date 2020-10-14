@@ -1,4 +1,4 @@
-export interface Data {
+export type Data = {
   song?: string,
   singer?: string,
   image?: string,

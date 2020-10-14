@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './templates/header';
-import BodyHome from './templates/bodyhome';
+import Header from '../../containers/home/templates/header';
+import BodyHome from '../../containers/home/templates/bodyhome';
 import styles from './home.module.scss'
-import Footer from './templates/footer';
+import Footer from '../../containers/home/templates/footer';
 
 const Home: React.FC = () => {
   return (

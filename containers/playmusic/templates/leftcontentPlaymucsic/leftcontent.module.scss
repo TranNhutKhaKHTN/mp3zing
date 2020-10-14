@@ -42,20 +42,21 @@
   overflow: hidden;
   border-radius: 7px;
   // animation: rr 0.7;
-  animation: roll 3000s infinite;
+  animation: roll 3s infinite linear;
   //transform: rotate(360deg);
 }
 
 @keyframes roll {
   0% {
     transform: rotate(0);
-    border-radius: 60%;
+    border-radius: 100%;
   }
-  1% {
+  20% {
     border-radius: 100%;
   }
   100% {
-    transform: rotate(400000deg);
+    border-radius: 100%;
+    transform: rotate(360deg);
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './cardtend.module.scss'
 import ImgSong from '../ImgSong';
 import SingerSong from '../singersong';
-import { Data } from './../../../interface/interface'
+import { Data } from '../../../../pages/interface/interface'
 
 
 type Props = {

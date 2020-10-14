@@ -10,6 +10,7 @@ interface album {
   singer: string,
 }
 
+
 type Props = {
   data: album
 }

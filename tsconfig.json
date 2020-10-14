@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/home/organisms/hottopic/index.js"
+    "containers/home/organisms/hottopic/index.js"
   ],
   "exclude": [
     "node_modules"
