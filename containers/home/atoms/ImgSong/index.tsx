@@ -29,6 +29,7 @@ const ImgSong: React.FC<Props> = (props: Props) => {
   //   icon = <div className={styles.icon} style={{ fontSize: 14 }}>{props.singer}</div>
   // }
 
+  // sửa lại thành lookup map
   switch (props.size) {
     case "S":
       size = styles.S

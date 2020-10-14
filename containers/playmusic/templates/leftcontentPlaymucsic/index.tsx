@@ -6,10 +6,13 @@ import styles from './leftcontent.module.scss'
 
 const LeftContentPlayMucsic: React.FC = () => {
   const [roll, setRoll] = useState(false);
+  // const [play,setPlay]=useState(false);
 
-  const clickBtn = () => {
+  const clickPlayMusic = () => {
     const quay = !roll;
     setRoll(quay)
+    const audio = new Audio("https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3");
+    audio.play();
   }
 
   const dataleftcontent = {
@@ -18,6 +21,7 @@ const LeftContentPlayMucsic: React.FC = () => {
 
   return (
     <div className={styles.content}>
+
       <div className={roll ? styles.imgsongroll : styles.imgsong}>
         <ImgSong size="XLL" data={dataleftcontent}></ImgSong>
       </div>
@@ -25,7 +29,7 @@ const LeftContentPlayMucsic: React.FC = () => {
         <b>Radio Hoa Hải Đường</b>
       </div>
 
-      <button onClick={clickBtn} className={styles.button}>{roll ? <PauseOutlined /> : <CaretRightOutlined />} Phát tất cả</button>
+      <button onClick={clickPlayMusic} className={styles.button}>{roll ? <PauseOutlined /> : <CaretRightOutlined />} Phát tất cả</button>
       <div style={{ color: "#AEAEAE" }}>50 bài hát 3 giờ 42 phút</div>
       <div className={styles.icon}>
         <div className={styles.iconitem}>
