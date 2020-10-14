@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from "./hottopic.module.scss"
 import Topic from '../../atoms/topic';
 
-const HotTopic: React.FC = (props) => {
+const HotTopic: React.FC = () => {
   const datas = [
     {
       image: "https://photo-zmp3.zadn.vn/cover/6/0/8/d/608d6474b6daa5563eb5c088ca08cc98.jpg"

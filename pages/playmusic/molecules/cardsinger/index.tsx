@@ -1,5 +1,4 @@
 import { UserAddOutlined } from '@ant-design/icons';
-import { type } from 'os';
 import React from 'react';
 import ImgSong from '../../../home/atoms/ImgSong';
 import styles from './cardsinger.module.scss'
@@ -14,7 +13,7 @@ type Props = {
   data: Cardsinger
 }
 
-const CardSinger: React.FC<Props> = (props) => {
+const CardSinger: React.FC<Props> = (props: Props) => {
   const data = props.data
   return (
     <div className={styles.cardsinger}>

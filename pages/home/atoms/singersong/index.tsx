@@ -2,15 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './singersong.module.scss'
 
-// SingerSong.propTypes = {
-
-// };
-
 type Props = {
   data?: any
 }
 
-const SingerSong: React.FC<Props> = (props) => {
+const SingerSong: React.FC<Props> = (props: Props) => {
   let song: string
   let singer: string
   const data = props.data
@@ -29,5 +25,9 @@ const SingerSong: React.FC<Props> = (props) => {
     </div>
   );
 }
+
+SingerSong.propTypes = {
+  data: PropTypes.any
+};
 
 export default SingerSong;

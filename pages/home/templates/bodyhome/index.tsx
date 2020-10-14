@@ -1,25 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AD from '../../molecules/ad';
 import styles from './body.module.scss'
 import SlideShow from '../../organisms/slideshow';
 import chart from './../../../../public/chart.png'
 import Tending from '../../organisms/Tending';
-import AlbumItem from '../../molecules/albumitem';
 import Album from '../../organisms/Album';
 import VideoHot from '../../organisms/videohot';
-import ImgSong from '../../atoms/ImgSong';
 import ListNhac from '../../organisms/listnhac';
 import HotSinger from '../../organisms/hotsinger';
 import HotTopic from '../../organisms/hottopic';
 import TabSong from '../../organisms/tabsong';
 import img from './../../../../public/img.png'
-import TabMvItem from '../../atoms/tabmvitem';
 import TabMV from '../../organisms/tabmv';
 import MusicNews from '../../organisms/musicnews';
 import DoiTac from '../../atoms/doitac';
 
-const BodyHome: React.FC = (props) => {
+const BodyHome: React.FC = () => {
   const datas = [
     {
       image: "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/9/9/6/c/996c529742d9f2101ef58790da95c27d.jpg",

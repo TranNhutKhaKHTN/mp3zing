@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './title.module.scss'
 import { RightOutlined } from '@ant-design/icons'
 
@@ -9,7 +8,7 @@ type Props = {
   icon: string
 }
 
-const Title: React.FC<Props> = (props) => {
+const Title: React.FC<Props> = (props: Props) => {
   let size: string;
   switch (props.size) {
     case "S":

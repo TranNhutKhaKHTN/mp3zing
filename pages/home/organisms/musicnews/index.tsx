@@ -1,11 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './musicnews.module.scss';
 import ListNews from '../../molecules/listnews';
-import Title from '../../atoms/title';
 // import styles from './musicnews.module.scss'
 
-const MusicNews: React.FC = (props) => {
+const MusicNews: React.FC = () => {
   return (
     <div className={styles.news}>
       <div className={styles.title}>

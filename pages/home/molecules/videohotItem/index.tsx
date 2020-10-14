@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Video from '../../atoms/video';
 import styles from './videohotitem.module.scss'
 import ImgSong from '../../atoms/ImgSong';
 
@@ -14,7 +12,7 @@ type Props = {
   data: videoHot
 }
 
-const VideoHotItem: React.FC<Props> = (props) => {
+const VideoHotItem: React.FC<Props> = (props: Props) => {
   const data = props.data
   return (
     <div className={styles.videoitem}>

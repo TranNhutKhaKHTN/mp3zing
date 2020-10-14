@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TabMvItem from '../../atoms/tabmvitem';
 import TopItemTab from '../topitemtab';
 import styles from './listtabmv.module.scss'
@@ -17,7 +16,7 @@ type Props = {
   sizeimage?: string
 }
 
-const ListTabMV: React.FC<Props> = (props) => {
+const ListTabMV: React.FC<Props> = (props: Props) => {
   const datas = props.data;
   const listitems = datas.map((data, index) => {
     if (index === 0) {

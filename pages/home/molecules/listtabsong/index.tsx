@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './listtabsong.module.scss'
-import SingerSong from '../../atoms/singersong';
 import TabSongItem from '../../atoms/tabsongitem';
 import TopItemTab from '../topitemtab';
 
@@ -17,7 +15,7 @@ type Props = {
   data: tabsongItem[]
 }
 
-const ListTabSong: React.FC<Props> = (props) => {
+const ListTabSong: React.FC<Props> = (props: Props) => {
   const datas = props.data;
   // console.log(props);
   const tabitems = datas.map((data, index) => {

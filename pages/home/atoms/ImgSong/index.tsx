@@ -1,16 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './imgsong.module.scss'
 import { PlayCircleOutlined } from '@ant-design/icons'
+import { Data } from './../../../interface/interface'
 
 type Props = {
   image?: string,
-  data?: any,
-  singer?: any,
+  data: Data,
+  singer?: string,
   size?: string,
 }
 
-const ImgSong: React.FC<Props> = (props) => {
+const ImgSong: React.FC<Props> = (props: Props) => {
   let img: string;
   const data = props.data;
 
@@ -22,44 +22,11 @@ const ImgSong: React.FC<Props> = (props) => {
   }
   // const type = props.type;
   let size: string;
-  let sizeIcon: number;
-  let icon: any;
-  icon = <PlayCircleOutlined className={styles.icon}></PlayCircleOutlined>
-  if (props.singer) {
-    icon = <div className={styles.icon} style={{ fontSize: 14 }}>{props.singer}</div>
-  }
-  // if (props.size === "M") {
-  //   size = styles.M;
-  //   sizeIcon = 20
-  // }
-  // if (props.size === "S") {
-  //   size = styles.S;
-  // }
-  // if (props.size === "L") {
-  //   size = styles.L;
-  // }
-  // if (props.size === "XL") {
-  //   size = styles.XL;
-  // }
-  // if (props.size === "XXL") {
-  //   size = styles.XXL;
-
-  // }
-  // if (props.size === "ML") {
-  //   size = styles.ML;
-
-  // }
-  // if (props.size === "Smallrectangle") {
-  //   size = styles.Smallrectangle;
-  // }
-  // if (props.size === "RaM") {
-  //   size = styles.RaM;
-  // }
-  // if (props.size === "RaL") {
-  //   size = styles.RaL;
-  // }
-  // if (props.size === "XLL") {
-  //   size = styles.XLL;
+  // let sizeIcon: number;
+  // let icon: any;
+  // icon = <PlayCircleOutlined className={styles.icon}></PlayCircleOutlined>
+  // if (props.singer) {
+  //   icon = <div className={styles.icon} style={{ fontSize: 14 }}>{props.singer}</div>
   // }
 
   switch (props.size) {
@@ -103,7 +70,11 @@ const ImgSong: React.FC<Props> = (props) => {
       <div className={styles.imgsong}>
         <img className={styles.img} src={img}></img>
         <div className={styles.opacity} >
-          {icon}
+          {
+            props.singer ?
+              <div className={styles.icon} style={{ fontSize: 14 }}>{props.singer}</div>
+              : <PlayCircleOutlined className={styles.icon}></PlayCircleOutlined>
+          }
         </div>
       </div>
     </div>

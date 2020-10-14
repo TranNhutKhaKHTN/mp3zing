@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ImgSong from '../../atoms/ImgSong';
 import styles from './listnhac.module.scss'
 import CardTend from '../../atoms/cardtend';
 import ListIcon from '../../atoms/listicon';
@@ -15,7 +13,7 @@ type Props = {
   data: listnhac
 }
 
-const ListNhacItem: React.FC<Props> = (props) => {
+const ListNhacItem: React.FC<Props> = (props: Props) => {
   return (
     <div className={styles.listnhac}>
       <div className={styles.card}>

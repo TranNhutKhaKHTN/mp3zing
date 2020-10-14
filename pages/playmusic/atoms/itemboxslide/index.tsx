@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ImgSong from '../../../home/atoms/ImgSong';
 import styles from './itemboxslide.module.scss';
 
@@ -12,7 +11,7 @@ type Props = {
   data: boxslide
 }
 
-const ItemBoxSlide: React.FC<Props> = (props) => {
+const ItemBoxSlide: React.FC<Props> = (props: Props) => {
   const data = props.data
   return (
     <div>

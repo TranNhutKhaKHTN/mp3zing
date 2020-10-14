@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ImgSong from '../ImgSong';
 import SingerSong from '../singersong';
 import styles from './tabmvitem.module.scss'
@@ -18,7 +17,7 @@ type Props = {
   sizeimage?: string
 }
 
-const TabMvItem: React.FC<Props> = (props) => {
+const TabMvItem: React.FC<Props> = (props: Props) => {
   // console.log(props)
   const data = props.data
   return (

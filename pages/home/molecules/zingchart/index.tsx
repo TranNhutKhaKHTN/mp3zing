@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './zingchart.module.scss'
 
 // ZingChart.propTypes = {
 
 // };
 
-const ZingChart: React.FC = (props) => {
+const ZingChart: React.FC = () => {
   return (
     <div className={styles.zingchart}>
       <div>

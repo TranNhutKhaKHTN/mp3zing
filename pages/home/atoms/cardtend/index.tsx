@@ -1,14 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './cardtend.module.scss'
 import ImgSong from '../ImgSong';
 import SingerSong from '../singersong';
+import { Data } from './../../../interface/interface'
 
-// CardTend.propTypes = {
 
-// };
+type Props = {
+  data: Data,
+  size: string
+}
 
-function CardTend(props) {
+const CardTend: React.FC<Props> = (props: Props) => {
   const data = props.data
   // console.log(props)
   const size = props.size

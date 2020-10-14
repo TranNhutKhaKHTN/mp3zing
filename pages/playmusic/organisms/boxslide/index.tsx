@@ -12,7 +12,7 @@ type Props = {
   title: string
 }
 
-const BoxSlide: React.FC<Props> = (props) => {
+const BoxSlide: React.FC<Props> = (props: Props) => {
   const data = props.data;
   const title = props.title
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import SingerSong from '../singersong';
 import ListIcon from '../listicon';
 import styles from './tabsongitem.module.scss'
@@ -11,7 +10,7 @@ type Props = {
   type?: string
 }
 
-const TabSongItem: React.FC<Props> = (props) => {
+const TabSongItem: React.FC<Props> = (props: Props) => {
   let color: string;
   if (props.type === "top") {
     color = "white"

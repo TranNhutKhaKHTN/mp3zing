@@ -1,11 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AlbumItem from '../../molecules/albumitem';
 import styles from './album.module.scss'
-
-Album.propTypes = {
-
-};
 
 interface album {
   image: string,
@@ -19,7 +14,7 @@ type Props = {
   icon?: string
 }
 
-function Album(props: Props) {
+const Album: React.FC<Props> = (props: Props) => {
 
   const datas: album[] = props.datas
   const ListAlbum = datas.map((data, index) => {

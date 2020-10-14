@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './listicon.module.scss'
 import { DownloadOutlined, PlusOutlined, ShareAltOutlined } from '@ant-design/icons'
 
-const ListIcon: React.FC = (props) => {
+const ListIcon: React.FC = () => {
   return (
     <span className={styles.grIcon}>
       <DownloadOutlined className={styles.icon} />

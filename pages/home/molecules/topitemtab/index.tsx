@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from "./topitemtab.module.scss"
 import TabSongItem from '../../atoms/tabsongitem';
 
@@ -15,7 +14,7 @@ type Props = {
   data: tabMV
 }
 
-const TopItemTab: React.FC<Props> = (props) => {
+const TopItemTab: React.FC<Props> = (props: Props) => {
   const data = props.data
   const image = "https://photo-zmp3.zadn.vn/banner/3/0/6/8/3068a4e198cb63856ce698865194d74d.jpg"
   return (

@@ -6,7 +6,7 @@ import SearchTool from '../../molecules/searchtool';
 import { useRouter } from 'next/router';
 
 
-const TopBar: React.FC = (props) => {
+const TopBar: React.FC = () => {
   const { Header } = Layout;
   const route = useRouter()
   const clickLogo = () => {

@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { EllipsisOutlined, HeartOutlined } from '@ant-design/icons';
 import karaoke from './../../../../public/microphone.svg';
 import styles from './griconplaymusic.module.scss';
 
 
-const GrIconPlayMusic: React.FC = (props) => {
+const GrIconPlayMusic: React.FC = () => {
   return (
     <div className={styles.gricon}>
       <div>

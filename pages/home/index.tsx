@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Header from './templates/header';
 import BodyHome from './templates/bodyhome';
 import styles from './home.module.scss'
 import Footer from './templates/footer';
 
-const Home: React.FC = (props) => {
+const Home: React.FC = () => {
   return (
     <div>
       <Header></Header>

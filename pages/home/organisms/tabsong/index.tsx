@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Tabs } from 'antd';
 import styles from './tab.module.scss'
 import ListTabSong from '../../molecules/listtabsong';
 
-const TabSong: React.FC = (props) => {
+const TabSong: React.FC = () => {
   const { TabPane } = Tabs
   const tab1 = <div className={styles.tabname}>Việt Nam</div>
   const tab2 = <div className={styles.tabname}>US/UK</div>

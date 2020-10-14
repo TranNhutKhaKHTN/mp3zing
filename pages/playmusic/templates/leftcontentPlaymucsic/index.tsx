@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import ImgSong from '../../../home/atoms/ImgSong';
 import { CaretRightOutlined, PauseOutlined, EllipsisOutlined, HeartOutlined } from "@ant-design/icons"
 import styles from './leftcontent.module.scss'
 
 
-const LeftContentPlayMucsic: React.FC = (props) => {
+const LeftContentPlayMucsic: React.FC = () => {
   const [roll, setRoll] = useState(false);
 
   const clickBtn = () => {

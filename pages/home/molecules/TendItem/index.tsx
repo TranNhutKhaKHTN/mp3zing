@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// import CardSong from '../../atoms/cardsong';
 import InforTend from '../../atoms/InforTend';
 import styles from './tenditem.module.scss'
 import CardTend from '../../atoms/cardtend';
@@ -16,7 +14,7 @@ type Props = {
   data: tenditem
 }
 
-const TendItem: React.FC<Props> = (props) => {
+const TendItem: React.FC<Props> = (props: Props) => {
 
   const { data } = props;
   // console.log(data)

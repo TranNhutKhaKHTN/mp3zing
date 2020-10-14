@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
 import styles from './slideshow.module.scss'
 
-const SlideShow: React.FC = (props) => {
+const SlideShow: React.FC = () => {
 
   const listImage = [
     "https://photo-zmp3.zadn.vn/banner/7/5/2/0/7520588a96c8fca8a543443bbf606682.jpg",

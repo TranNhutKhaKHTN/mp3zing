@@ -13,7 +13,7 @@ type Props = {
   data: Cardsinger[]
 }
 
-const ListCardSinger: React.FC<Props> = (props) => {
+const ListCardSinger: React.FC<Props> = (props: Props) => {
   const datas = props.data
   const listcardsinger = datas.map((data, index) => {
     return (

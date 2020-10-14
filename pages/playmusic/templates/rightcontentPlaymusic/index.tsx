@@ -1,12 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import GrIconPlayMusic from './../../atoms/griconplaymusic'
-import LineMusicPlay from '../../molecules/linemusicplay';
 import ListLinePlayMusic from '../../organisms/listlineplaymusic';
 import ListCardSinger from '../../organisms/listcardsinger';
 import BoxSlide from '../../organisms/boxslide';
 
-const RightContentPlaymusic: React.FC = (props) => {
+const RightContentPlaymusic: React.FC = () => {
 
   const datalinemusic = [
     {

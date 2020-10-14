@@ -1,10 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ImgSong from '../../../home/atoms/ImgSong';
 import GrIconPlayMusic from '../../atoms/griconplaymusic';
 import styles from './linemusicplay.module.scss'
-import { type } from 'os';
-import SingerSong from '../../../home/atoms/singersong';
 
 interface LineMusic {
   image: string;
@@ -17,7 +14,7 @@ type Props = {
   data: LineMusic
 }
 
-const LineMusicPlay: React.FC<Props> = (props) => {
+const LineMusicPlay: React.FC<Props> = (props: Props) => {
   const data = props.data
   return (
     <div className={styles.line}>

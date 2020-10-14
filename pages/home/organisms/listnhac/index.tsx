@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ListNhacItem from '../../molecules/listnhacitem';
-import CardTend from '../../atoms/cardtend';
 import styles from './listnhac.module.scss'
 
 interface listnhac {
@@ -14,7 +12,7 @@ type Props = {
   datas: listnhac[]
 }
 
-const ListNhac: React.FC<Props> = (props) => {
+const ListNhac: React.FC<Props> = (props: Props) => {
   const datas: listnhac[] = props.datas;
   const ListNhac = datas.map((data, index) => {
     return (

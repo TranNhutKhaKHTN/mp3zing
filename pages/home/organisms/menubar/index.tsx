@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './menubar.module.scss'
 import { HomeOutlined, PoweroffOutlined, CloudUploadOutlined } from '@ant-design/icons'
 import ZingChart from '../../molecules/zingchart';
@@ -7,7 +6,7 @@ import { useRouter } from 'next/router';
 
 
 
-const Menubar: React.FC = (props) => {
+const Menubar: React.FC = () => {
   const router = useRouter()
   const redirectPlay = () => {
     router.push("/playmusic")

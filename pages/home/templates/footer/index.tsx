@@ -3,8 +3,7 @@ import lgfooter from './../../../../public/lgfooter.png'
 import rfooter from './../../../../public/rfooter.png'
 import styles from './footer.module.scss'
 
-const Footer: React.FC = (props) => {
-  const logo = "https://static-zmp3.zadn.vn/skins/zmp3-v5.1/images/icon_zing_mp3_60.png"
+const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerinfor}>

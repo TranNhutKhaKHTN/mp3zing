@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ItemBoxSlide from '../../atoms/itemboxslide';
 import styles from "./listitemboxslide.module.scss"
 
@@ -11,7 +10,7 @@ type Props = {
   data: boxslide[],
 }
 
-const ListItemBoxSlide: React.FC<Props> = (props) => {
+const ListItemBoxSlide: React.FC<Props> = (props: Props) => {
   const datas = props.data
   const listbox = datas.map((data, index) => {
     return (

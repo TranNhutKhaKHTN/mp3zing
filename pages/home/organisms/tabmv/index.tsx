@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Tabs } from 'antd';
 import styles from './tabmv.module.scss'
-import ListTabSong from '../../molecules/listtabsong';
 import ListTabMV from '../../molecules/listtabmv';
 
 interface tabMV {
@@ -18,7 +16,7 @@ type Props = {
   sizeimage: string
 }
 
-const TabMV: React.FC<Props> = (props) => {
+const TabMV: React.FC<Props> = (props: Props) => {
   const data = props.data
   //MV có 3 tab cần 3 bộ data
   // console.log(data);

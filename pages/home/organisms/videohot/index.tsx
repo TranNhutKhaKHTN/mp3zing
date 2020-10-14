@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import VideoHotItem from '../../molecules/videohotItem';
 import styles from './videohot.module.scss'
 import { RightOutlined } from '@ant-design/icons'
 
 
-const VideoHot: React.FC = (props) => {
+const VideoHot: React.FC = () => {
   const datas = [
     {
       image: "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/1/5/0/c/150c5e9c3780177b3f5f34d24d3903e4.jpg",

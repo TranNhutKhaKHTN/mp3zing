@@ -4,7 +4,7 @@ import ImgSong from '../../atoms/ImgSong';
 
 
 
-const HotSinger: React.FC = (props) => {
+const HotSinger: React.FC = () => {
   const hotsingers = [
     {
       image: "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/8/b/4/c/8b4c040a3f0a64672e8dad7078aff3d1.jpg#home_hotartist_01",
