@@ -1,0 +1,2 @@
+export const FETCH_PLAYLIST = "FETCH_PLAYLIST"
+export const ADD_PLAYLIST = "ADD_PLAYLIST"
