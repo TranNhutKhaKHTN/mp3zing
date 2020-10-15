@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import ListLinePlayMusic from '../../organisms/listlineplaymusic';
 import ListCardSinger from '../../organisms/listcardsinger';
 import BoxSlide from '../../organisms/boxslide';
-import { fetchPlayList } from './../../../../redux/actions/playmusic';
-import { useDispatch } from 'react-redux';
+import { fetchDataPlayMusic } from './../../../../redux/actions/playmusic';
+import { useDispatch, useSelector } from 'react-redux';
+// import { dataTabAlbum } from '../../../home/templates/data/tabalbum';
 
 // const datalinemusic1 = [
 //   {
@@ -110,18 +111,16 @@ const databoxslide = [
   }
 ]
 const RightContentPlaymusic: React.FC = () => {
-  const [datalinemusic, setdatalinemusic] = useState([]);
+  // const [datalinemusic, setdatalinemusic] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const action = fetchPlayList()
+    const action = fetchDataPlayMusic()
     dispatch(action)
-    fetch("/api/getListPlay")
-      .then((res) => res.json())
-      .then((json) => {
-        setdatalinemusic(json)
-      })
   }, [])
+
+  const datalinemusic = useSelector(state => state.playmusic.dataPlayList)
+  console.log(datalinemusic)
   return (
     <div>
       <ListLinePlayMusic data={datalinemusic}></ListLinePlayMusic>

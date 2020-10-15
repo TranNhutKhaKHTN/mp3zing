@@ -22,7 +22,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "containers/home/organisms/hottopic/index.js"
+    "containers/home/organisms/hottopic/index.js",
+    "redux/reducers/homeReducer/index.js",
+    "redux/reducers/playmusicReducer/index.js"
   ],
   "exclude": [
     "node_modules"

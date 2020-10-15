@@ -11,8 +11,10 @@ const LeftContentPlayMucsic: React.FC = () => {
   const clickPlayMusic = () => {
     const quay = !roll;
     setRoll(quay)
-    const audio = new Audio("https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3");
-    audio.play();
+    if (quay) {
+      const audio = new Audio("https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3");
+      audio.play();
+    }
   }
 
   const dataleftcontent = {
