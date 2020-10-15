@@ -29,3 +29,7 @@ export const getPlayList = () => {
 export const getListCardSinger = () => {
   return callGetAPI("/api/getListCardSinger");
 }
+
+export const getListBoxMusic = () => {
+  return callGetAPI("/api/getListBoxMusic");
+}

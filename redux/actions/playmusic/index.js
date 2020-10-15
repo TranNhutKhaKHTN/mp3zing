@@ -6,6 +6,20 @@ export const fetchPlayList = () => {
   })
 }
 
+export const fetchDataPlayMusic = () => {
+  return ({
+    type: type.FETCH_DATA_PLAYMUSIC,
+    payload: null
+  })
+}
+
+export const addCardSinger = (data) => {
+  return ({
+    type: type.ADD_LIST_CARDSINGER,
+    payload: data
+  })
+}
+
 export const addPlayList = (data) => {
   return ({
     type: type.ADD_PLAYLIST,
@@ -13,9 +27,9 @@ export const addPlayList = (data) => {
   })
 }
 
-export const fetchDataPlayMusic = () => {
+export const addDataBoxMusic = (data) => {
   return ({
-    type: type.FETCH_DATA_PLAYMUSIC,
-    payload: null
+    type: type.ADD_DATA_BOXMUSIC,
+    payload: data
   })
 }

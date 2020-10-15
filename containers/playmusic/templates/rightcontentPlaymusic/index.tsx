@@ -69,47 +69,7 @@ import { useDispatch, useSelector } from 'react-redux';
 //   },
 // ]
 
-const dataCardsinger = [
-  {
-    image: "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/c/1/4/0/c140ebb6799391799b29a8eabae217f5.jpg",
-    care: 101,
-    singer: "Đạt G"
-  },
-  {
-    image: "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/9/c/e/6/9ce68f7d32102e37837bf3d87c82895c.jpg",
-    care: 81,
-    singer: "B Ray"
-  },
-  {
-    image: "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/8/4/84ffbc3c35a04d698f157a129e68d51a_1499686528.jpg",
-    care: 77,
-    singer: "Khắc Việt"
-  },
-  {
-    image: "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/a/3/3/c/a33cb5d2cb3d43a2854c6377ce21d3a7.jpg",
-    care: 77,
-    singer: "Hòa Minzy"
-  }
-]
 
-const databoxslide = [
-  {
-    image: "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/0/b/5/b/0b5b01aacf59238e378c87329363062c.jpg",
-    title: "Nhạc Trữ Tình Remix"
-  },
-  {
-    image: "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/e/f/2/c/ef2c26ac46d060be57748c6acfbe1b06.jpg",
-    title: "Sến Remix"
-  },
-  {
-    image: "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/9/0/6/c/906c05e4a8efd526b5938f3b39ec7e66.jpg",
-    title: "Nhạc Trữ Tính Sôi Động"
-  },
-  {
-    image: "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/5/5/d/f/55df6ee22b76f326f9cbeb70c0cb7aa8.jpg",
-    title: "Bolero Remix"
-  }
-]
 const RightContentPlaymusic: React.FC = () => {
   // const [datalinemusic, setdatalinemusic] = useState([]);
   const dispatch = useDispatch();
@@ -119,8 +79,10 @@ const RightContentPlaymusic: React.FC = () => {
     dispatch(action)
   }, [])
 
-  const datalinemusic = useSelector(state => state.playmusic.dataPlayList)
-  console.log(datalinemusic)
+  const datalinemusic = useSelector((state: any) => state.playmusic.dataPlayList)
+  const dataCardsinger = useSelector((state: any) => state.playmusic.dataCardSinger)
+  const databoxslide = useSelector((state: any) => state.playmusic.dataBoxMusic)
+
   return (
     <div>
       <ListLinePlayMusic data={datalinemusic}></ListLinePlayMusic>
