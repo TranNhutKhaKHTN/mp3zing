@@ -15,3 +15,13 @@
   overflow: hidden;
   align-items: center;
 }
+
+.btnlogin {
+  color: white;
+  margin-left: 100px;
+
+  cursor: pointer;
+  :hover {
+    border-bottom: 3 solid white;
+  }
+}

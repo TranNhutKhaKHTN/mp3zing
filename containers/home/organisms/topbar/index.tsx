@@ -12,6 +12,11 @@ const TopBar: React.FC = () => {
   const clickLogo = () => {
     route.push("/home")
   }
+
+  const openLoginPage = () => {
+    window.open("/login", "windowName", "height=970,width=600, top: 0, left:50%");
+  }
+
   return (
     <div>
       <Header style={{ height: 50 }}>
@@ -24,7 +29,7 @@ const TopBar: React.FC = () => {
             <Menu.Item key="3">TV</Menu.Item>
             <Menu.Item key="4">ZALO PC</Menu.Item>
           </Menu>
-          <div style={{ color: 'white', marginLeft: 100 }}>Đăng nhập</div>
+          <div className={styles.btnlogin} onClick={openLoginPage}>Đăng nhập</div>
         </div>
       </Header>
     </div>

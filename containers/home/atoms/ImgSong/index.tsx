@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './imgsong.module.scss'
 import { PlayCircleOutlined } from '@ant-design/icons'
-import { Data } from '../../../../pages/interface/interface'
+import { Data } from '../../../interface/interface'
 
 type Props = {
   image?: string,

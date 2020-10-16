@@ -1,0 +1,11 @@
+.headerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .titleLogin {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+}

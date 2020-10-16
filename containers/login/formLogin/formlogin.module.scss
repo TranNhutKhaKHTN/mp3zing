@@ -1,0 +1,62 @@
+.lineInputlogin {
+  margin-top: 20px;
+  height: 35px;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+
+  font-size: 15px;
+
+  margin-left: 20px;
+  margin-right: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    //height: 25px;
+    width: 270px;
+    // line-height: 25px;
+    outline: 0;
+    border-width: 0;
+  }
+}
+
+.grbutton {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.formlogin {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.btnlogin {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  height: 45px;
+}
+
+.forgetpassword {
+  margin-top: 50px;
+  width: 100%;
+  border-top: 1px solid #e2e2e2;
+  text-align: center;
+  span {
+    cursor: pointer;
+    font-size: 12.5px;
+    &:hover {
+      border-bottom: 1px solid #018ff2;
+      color: #018ff2;
+    }
+  }
+}
