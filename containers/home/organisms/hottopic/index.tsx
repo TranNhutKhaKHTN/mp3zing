@@ -21,7 +21,7 @@ const HotTopic: React.FC = () => {
     }
   ]
   const topics = datas.map((data, index) => {
-    return <Topic key={index} data={data}></Topic>
+    return <Topic key={index} data={data} />
   })
   return (
     <div className={styles.hottopic}>

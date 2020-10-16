@@ -8,10 +8,10 @@ const BodyPlay: React.FC = () => {
   return (
     <div className={styles.bodycontent}>
       <div className={styles.leftContent}>
-        <LeftContentPlayMucsic></LeftContentPlayMucsic>
+        <LeftContentPlayMucsic />
       </div>
       <div className={styles.rightContent}>
-        <RightContentPlaymusic></RightContentPlaymusic>
+        <RightContentPlaymusic />
       </div>
     </div>
   );

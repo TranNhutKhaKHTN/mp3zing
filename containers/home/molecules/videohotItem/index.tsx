@@ -16,7 +16,7 @@ const VideoHotItem: React.FC<Props> = (props: Props) => {
   const data = props.data
   return (
     <div className={styles.videoitem}>
-      <ImgSong size="RaL" data={data}></ImgSong>
+      <ImgSong size="RaL" data={data} />
       <div className={styles.title}>
         {data.song}
       </div>

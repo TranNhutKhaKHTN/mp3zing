@@ -26,11 +26,11 @@ const TabSongItem: React.FC<Props> = (props: Props) => {
       <div className={styles.rank}>
         <span>{data.rank}</span>
         <div className={styles.singersong}>
-          <SingerSong data={data}></SingerSong>
+          <SingerSong data={data} />
         </div>
       </div>
       <div className={styles.grIcon}>
-        <ListIcon></ListIcon>
+        <ListIcon />
       </div>
       <div className={styles.watch}>
         {data.watch}

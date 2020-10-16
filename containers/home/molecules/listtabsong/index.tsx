@@ -21,14 +21,14 @@ const ListTabSong: React.FC<Props> = (props: Props) => {
   const tabitems = datas.map((data, index) => {
     if (index > 0) {
       return <div key={index}>
-        <TabSongItem data={data}></TabSongItem>
+        <TabSongItem data={data} />
         <div className={styles.horizontalline}></div>
       </div>
     }
     else {
       return (
         <div key={index}>
-          <TopItemTab data={data}></TopItemTab>
+          <TopItemTab data={data} />
           <div className={styles.horizontalline}></div>
         </div>
       )

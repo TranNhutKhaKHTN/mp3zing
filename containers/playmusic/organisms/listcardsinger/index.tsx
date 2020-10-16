@@ -17,7 +17,7 @@ const ListCardSinger: React.FC<Props> = (props: Props) => {
   const datas = props.data
   const listcardsinger = datas.map((data, index) => {
     return (
-      <CardSinger key={index} data={data}></CardSinger>
+      <CardSinger key={index} data={data} />
     )
   })
   return (

@@ -7,13 +7,13 @@ import BodyPlay from './../../containers/playmusic/templates/bodyPlay';
 const PlayMusic: React.FC = () => {
   return (
     <div>
-      <Header></Header>
+      <Header />
       <div className={styles.body}>
         <div className={styles.bodyContent}>
-          <BodyPlay></BodyPlay>
+          <BodyPlay />
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

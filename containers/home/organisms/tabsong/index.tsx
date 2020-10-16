@@ -88,13 +88,13 @@ const TabSong: React.FC = () => {
       </div>
       <Tabs type="card">
         <TabPane tab={tab1} key="1" className={styles.tabitem}>
-          <ListTabSong data={data1}></ListTabSong>
+          <ListTabSong data={data1} />
         </TabPane>
         <TabPane tab={tab2} key="2">
-          <ListTabSong data={data1}></ListTabSong>
+          <ListTabSong data={data1} />
         </TabPane>
         <TabPane tab={tab3} key="3">
-          <ListTabSong data={data1}></ListTabSong>
+          <ListTabSong data={data1} />
         </TabPane>
       </Tabs>
     </div>

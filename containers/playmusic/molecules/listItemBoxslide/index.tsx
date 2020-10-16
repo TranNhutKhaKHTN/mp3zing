@@ -19,7 +19,6 @@ const ListItemBoxSlide: React.FC<Props> = (props: Props) => {
   })
   return (
     <div className={styles.list}>
-
       {listbox}
     </div>
   );

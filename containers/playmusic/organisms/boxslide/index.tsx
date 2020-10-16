@@ -25,7 +25,7 @@ const BoxSlide: React.FC<Props> = (props: Props) => {
         </div>
       </div>
       <div>
-        <ListItemBoxSlide data={data}></ListItemBoxSlide>
+        <ListItemBoxSlide data={data} />
       </div>
     </div>
   );

@@ -31,13 +31,13 @@ const TabMV: React.FC<Props> = (props: Props) => {
       </div>
       <Tabs type="card">
         <TabPane tab={tab1} key="1" className={styles.tabitem}>
-          <ListTabMV sizeimage={props.sizeimage} data={data}></ListTabMV>
+          <ListTabMV sizeimage={props.sizeimage} data={data} />
         </TabPane>
         <TabPane tab={tab2} key="2">
-          <ListTabMV sizeimage={props.sizeimage} data={data}></ListTabMV>
+          <ListTabMV sizeimage={props.sizeimage} data={data} />
         </TabPane>
         <TabPane tab={tab3} key="3">
-          <ListTabMV sizeimage={props.sizeimage} data={data}></ListTabMV>
+          <ListTabMV sizeimage={props.sizeimage} data={data} />
         </TabPane>
       </Tabs>
     </div>

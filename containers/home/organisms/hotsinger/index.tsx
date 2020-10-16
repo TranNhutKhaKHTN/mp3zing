@@ -48,7 +48,7 @@ const HotSinger: React.FC = () => {
     if (index > 0) {
       return (
         <div key={index}>
-          <ImgSong data={data} size="ML" singer={data.singer}></ImgSong>
+          <ImgSong data={data} size="ML" singer={data.singer} />
         </div>
       )
     }
@@ -60,7 +60,7 @@ const HotSinger: React.FC = () => {
       </div>
       <div className={styles.hotsinger}>
         <div className={styles.left}>
-          <ImgSong size="XXL" data={big} singer={big.singer}></ImgSong>
+          <ImgSong size="XXL" data={big} singer={big.singer} />
         </div>
         <div className={styles.right}>
           {list}

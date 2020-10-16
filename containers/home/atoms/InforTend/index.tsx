@@ -22,7 +22,7 @@ const InforTend: React.FC<Props> = () => {
         </div>
         <div>
           <span className={styles.grIcon}>
-            <ListIcon></ListIcon>
+            <ListIcon />
           </span>
           <span className={styles.watch}>
             67.540

@@ -17,7 +17,7 @@ const ListNhac: React.FC<Props> = (props: Props) => {
   const ListNhac = datas.map((data, index) => {
     return (
       <div key={index}>
-        <ListNhacItem data={data} ></ListNhacItem>
+        <ListNhacItem data={data} />
         {index < 9 ? <div className={styles.horizontalline}></div> : null}
       </div>
     )

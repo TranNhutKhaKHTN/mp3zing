@@ -17,10 +17,10 @@ const ListNhacItem: React.FC<Props> = (props: Props) => {
   return (
     <div className={styles.listnhac}>
       <div className={styles.card}>
-        <CardTend size="S" data={props.data}></CardTend>
+        <CardTend size="S" data={props.data} />
       </div>
       <div className={styles.grIcon}>
-        <ListIcon></ListIcon>
+        <ListIcon />
       </div>
     </div>
   );

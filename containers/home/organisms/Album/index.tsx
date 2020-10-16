@@ -19,7 +19,7 @@ const Album: React.FC<Props> = (props: Props) => {
   const datas: album[] = props.datas
   const ListAlbum = datas.map((data, index) => {
     return (
-      <AlbumItem key={index} data={data}></AlbumItem>
+      <AlbumItem key={index} data={data} />
     )
   })
   return (

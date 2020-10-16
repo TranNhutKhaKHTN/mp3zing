@@ -5,8 +5,8 @@ import Menubar from '../../organisms/menubar';
 const Header: React.FC = () => {
   return (
     <div>
-      <TopBar></TopBar>
-      <Menubar></Menubar>
+      <TopBar />
+      <Menubar />
     </div>
   );
 }

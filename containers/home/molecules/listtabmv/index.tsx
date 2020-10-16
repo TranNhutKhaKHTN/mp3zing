@@ -21,14 +21,14 @@ const ListTabMV: React.FC<Props> = (props: Props) => {
   const listitems = datas.map((data, index) => {
     if (index === 0) {
       return <div key={index}>
-        <TopItemTab data={data}></TopItemTab>
+        <TopItemTab data={data} />
         <div className={styles.horizontalline}></div>
       </div>
     }
     else {
       return (
         <div key={index}>
-          <TabMvItem data={data} sizeimage={props.sizeimage}></TabMvItem>
+          <TabMvItem data={data} sizeimage={props.sizeimage} />
           <div className={styles.horizontalline}></div>
         </div>
       )

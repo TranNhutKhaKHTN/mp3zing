@@ -16,7 +16,7 @@ const NewItem: React.FC<Props> = (props: Props) => {
   return (
     <div className={styles.newsitem}>
       <div className={styles.imgsong}>
-        <ImgSong size="RaM" data={props.data}></ImgSong>
+        <ImgSong size="RaM" data={props.data} />
       </div>
       <div className={styles.title}>
         {props.data.title}

@@ -4,15 +4,11 @@
   justify-content: space-between;
   color: #a0a0a0;
   cursor: pointer;
-
-  // &:hover {
-  //   background-color: red;
-  // }
 }
 
 .leftline {
   display: flex;
-  width: 300px;
+  width: 290px;
   justify-content: space-between;
   align-items: center;
 }
@@ -20,12 +16,12 @@
 .imgsong {
   overflow: hidden;
   border-radius: 5px;
-  margin-left: 20px;
+  margin-left: 0px;
   margin-right: 15px;
 }
 
 .singersong {
-  width: 180px;
+  width: 200px;
 }
 
 .rank {

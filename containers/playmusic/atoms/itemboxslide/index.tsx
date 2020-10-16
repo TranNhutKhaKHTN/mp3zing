@@ -16,7 +16,7 @@ const ItemBoxSlide: React.FC<Props> = (props: Props) => {
   return (
     <div>
       <div className={styles.imgsong}>
-        <ImgSong size="XL" data={data}></ImgSong>
+        <ImgSong size="XL" data={data} />
       </div>
       <div>{data.title}</div>
     </div>

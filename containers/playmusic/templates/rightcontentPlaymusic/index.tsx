@@ -18,11 +18,11 @@ const RightContentPlaymusic: React.FC = () => {
 
   return (
     <div>
-      <ListLinePlayMusic data={datalinemusic}></ListLinePlayMusic>
-      <ListCardSinger data={dataCardsinger}></ListCardSinger>
-      <BoxSlide data={databoxslide} title="Có Thể Bạn Quan Tâm"></BoxSlide>
-      <BoxSlide data={databoxslide} title="Nhạc Trẻ"></BoxSlide>
-      <BoxSlide data={databoxslide} title="V-pop"></BoxSlide>
+      <ListLinePlayMusic data={datalinemusic} />
+      <ListCardSinger data={dataCardsinger} />
+      <BoxSlide data={databoxslide} title="Có Thể Bạn Quan Tâm" />
+      <BoxSlide data={databoxslide} title="Nhạc Trẻ" />
+      <BoxSlide data={databoxslide} title="V-pop" />
     </div>
   );
 }

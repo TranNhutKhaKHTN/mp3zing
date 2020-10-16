@@ -39,7 +39,7 @@ const Tending: React.FC = () => {
   const listItem = listTend.map((data, index) => {
     return (
       <div key={index}>
-        <TendItem data={data}></TendItem>
+        <TendItem data={data} />
         {index === 4 ? null : <div className={styles.horizontalline}></div>}
       </div>
     )

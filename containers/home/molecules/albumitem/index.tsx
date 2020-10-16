@@ -19,7 +19,7 @@ const AlbumItem: React.FC<Props> = (props: Props) => {
   const data = props.data
   return (
     <div className={styles.albumitem}>
-      <ImgSong size="XL" data={data}></ImgSong>
+      <ImgSong size="XL" data={data} />
       <div className={styles.title}>
         {data.song}
       </div>

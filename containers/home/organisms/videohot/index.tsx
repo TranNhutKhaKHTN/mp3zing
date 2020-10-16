@@ -70,7 +70,7 @@ const VideoHot: React.FC = () => {
 
   const listVideo = datas.map((data, index) => {
     return (
-      <VideoHotItem key={index} data={data}></VideoHotItem>
+      <VideoHotItem key={index} data={data} />
     )
   })
   return (

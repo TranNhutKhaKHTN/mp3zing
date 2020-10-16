@@ -15,9 +15,9 @@ const ListLinePlayMusic: React.FC<Props> = (props: Props) => {
   const datas = props.data;
   const listLine = datas.map((data, index) => {
     return (
-      <div key={index}>
-        <LineMusicPlay data={data}></LineMusicPlay>
-        <div className={styles.horizontalline}></div>
+      <div key={index} className={styles.listline}>
+        <LineMusicPlay data={data} />
+        {/* <div className={styles.horizontalline}></div> */}
       </div>
     )
   })

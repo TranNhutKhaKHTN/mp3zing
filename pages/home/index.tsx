@@ -7,13 +7,13 @@ import Footer from '../../containers/home/templates/footer';
 const Home: React.FC = () => {
   return (
     <div>
-      <Header></Header>
+      <Header />
       <div className={styles.body}>
         <div className={styles.bodyContent}>
-          <BodyHome></BodyHome>
+          <BodyHome />
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

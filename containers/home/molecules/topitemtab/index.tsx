@@ -21,7 +21,7 @@ const TopItemTab: React.FC<Props> = (props: Props) => {
     <div className={styles.top1}>
       <img className={styles.img} src={image}></img>
       <div className={styles.itemtop1}>
-        <TabSongItem type="top" data={data}></TabSongItem>
+        <TabSongItem type="top" data={data} />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const MusicNews: React.FC = () => {
       <div className={styles.title}>
         TIN TỨC ÂM NHẠC
       </div>
-      <ListNews></ListNews>
+      <ListNews />
     </div>
   );
 }

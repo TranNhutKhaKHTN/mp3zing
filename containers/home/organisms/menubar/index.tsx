@@ -28,7 +28,7 @@ const Menubar: React.FC = () => {
             <div>
               #zingchart
             </div>
-            <span className={styles.dropdow}><ZingChart></ZingChart></span>
+            <span className={styles.dropdow}><ZingChart /></span>
           </div>
 
           <div className={styles.item}>

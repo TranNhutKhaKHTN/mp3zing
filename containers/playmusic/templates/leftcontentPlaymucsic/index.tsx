@@ -25,7 +25,7 @@ const LeftContentPlayMucsic: React.FC = () => {
     <div className={styles.content}>
 
       <div className={roll ? styles.imgsongroll : styles.imgsong}>
-        <ImgSong size="XLL" data={dataleftcontent}></ImgSong>
+        <ImgSong size="XLL" data={dataleftcontent} />
       </div>
       <div className={styles.title}>
         <b>Radio Hoa Hải Đường</b>

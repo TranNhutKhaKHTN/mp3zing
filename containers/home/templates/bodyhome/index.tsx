@@ -35,38 +35,38 @@ const BodyHome: React.FC = () => {
       <div className={styles.bodyContent1}>
         <div className={styles.leftContent}>
           <div>
-            <SlideShow></SlideShow>
+            <SlideShow />
             <img src={chart} style={{ width: "100%" }}>
             </img>
-            <Tending></Tending>
-            <Album title="NIỀM VUI MỖI NGÀY" datas={datas}></Album>
-            <VideoHot></VideoHot>
-            <Album title="ALBUM HOT" icon=">" datas={datas}></Album>
+            <Tending />
+            <Album title="NIỀM VUI MỖI NGÀY" datas={datas} />
+            <VideoHot />
+            <Album title="ALBUM HOT" icon=">" datas={datas} />
 
             <div className={styles.hotSong}>
-              <ListNhac datas={listNhac1} key={1}></ListNhac>
+              <ListNhac datas={listNhac1} key={1} />
               <div className={styles.verticalline}></div>
-              <ListNhac datas={listNhac2} key={2}></ListNhac>
+              <ListNhac datas={listNhac2} key={2} />
             </div>
 
             <div style={{ marginTop: 20 }}>
-              <HotSinger></HotSinger>
+              <HotSinger />
             </div>
           </div>
         </div>
 
         <div className={styles.rightContent}>
           <img src={img}></img>
-          <HotTopic></HotTopic>
-          <TabSong></TabSong>
-          <TabMV sizeimage="Smallrectangle" data={tabMV}></TabMV>
-          <TabMV sizeimage="L" data={tabAlbum}></TabMV>
-          <MusicNews></MusicNews>
+          <HotTopic />
+          <TabSong />
+          <TabMV sizeimage="Smallrectangle" data={tabMV} />
+          <TabMV sizeimage="L" data={tabAlbum} />
+          <MusicNews />
         </div>
 
       </div>
 
-      <DoiTac></DoiTac>
+      <DoiTac />
     </div>
   );
 }

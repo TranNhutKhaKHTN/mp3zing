@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TopNews from '../../atoms/topnews';
 import NewItem from '../../atoms/newsitem';
 import styles from './listnews.module.scss'
 
-const ListNews: React.FC = (props) => {
+const ListNews: React.FC = () => {
   const datas = [
     {
       image: "https://znews-photo.zadn.vn/w480/Uploaded/wyhktpu/2020_09_17/Gil_2.jpg",
@@ -36,7 +35,7 @@ const ListNews: React.FC = (props) => {
   })
   return (
     <div>
-      <TopNews></TopNews>
+      <TopNews />
       <div className={styles.horizontalline}></div>
       {topnews}
     </div>

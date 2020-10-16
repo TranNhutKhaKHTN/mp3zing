@@ -18,7 +18,7 @@ const CardSinger: React.FC<Props> = (props: Props) => {
   return (
     <div className={styles.cardsinger}>
       <div className={styles.imgsinger}>
-        <ImgSong size="C" data={data}></ImgSong>
+        <ImgSong size="C" data={data} />
       </div>
 
       <div className={styles.grinfor}>

@@ -16,9 +16,9 @@ const CardTend: React.FC<Props> = (props: Props) => {
   const size = props.size
   return (
     <div className={styles.cardtend}>
-      <ImgSong size={size} data={data}></ImgSong>
+      <ImgSong size={size} data={data} />
       <div className={styles.information}>
-        <SingerSong data={data}></SingerSong>
+        <SingerSong data={data} />
       </div>
     </div>
   );

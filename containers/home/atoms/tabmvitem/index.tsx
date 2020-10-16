@@ -24,10 +24,10 @@ const TabMvItem: React.FC<Props> = (props: Props) => {
     <div className={styles.tabmvitem}>
 
       <div className={styles.imgsong}>
-        <ImgSong size={props.sizeimage} data={data}></ImgSong>
+        <ImgSong size={props.sizeimage} data={data} />
       </div>
       <div className={styles.infor}>
-        <SingerSong data={data}></SingerSong>
+        <SingerSong data={data} />
         <div>
           {data.watch}
         </div>

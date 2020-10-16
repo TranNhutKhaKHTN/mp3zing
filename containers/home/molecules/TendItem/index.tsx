@@ -28,7 +28,7 @@ const TendItem: React.FC<Props> = (props: Props) => {
         <CardTend size="M" data={data} />
       </div>
       <div className={styles.rigntItem}>
-        <InforTend data={data}></InforTend>
+        <InforTend data={data} />
       </div>
     </div>
   );
