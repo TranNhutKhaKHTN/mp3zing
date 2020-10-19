@@ -1,4 +1,4 @@
-import *as type from './../../consts/index'
+import *as type from '../../actionType/index'
 
 const initialState = {
   dataPlayList: [],
@@ -13,23 +13,31 @@ const PlayMusicReducer = (state = initialState, action) => {
       // console.log(action);
       return {
         ...state,
-        dataPlayList: action.payload
+        dataPlayList: action.payload,
+        loading: true
       }
     case type.ADD_LIST_CARDSINGER:
       return {
         ...state,
-        dataCardSinger: action.payload
+        dataCardSinger: action.payload,
+        loading: true
       }
-    case type.SET_LOADING:
+    case type.FETCH_DATA:
       return {
         ...state,
         loading: true
+      }
+    case type.FETCH_SUCCESS:
+      return {
+        ...state,
+        loading: false
       }
     case type.ADD_DATA_BOXMUSIC:
       // console.log(action.payload)
       return {
         ...state,
-        dataBoxMusic: action.payload
+        dataBoxMusic: action.payload,
+        loading: true
       }
     default:
       return state

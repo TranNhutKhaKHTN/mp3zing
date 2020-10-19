@@ -9,12 +9,6 @@ const RightContentPlaymusic: React.FC = () => {
   const datalinemusic = useSelector((state: any) => state.playmusic.dataPlayList)
   const dataCardsinger = useSelector((state: any) => state.playmusic.dataCardSinger)
   const databoxslide = useSelector((state: any) => state.playmusic.dataBoxMusic)
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const action = fetchDataPlayMusic()
-    dispatch(action)
-  }, [])
 
   return (
     <div>

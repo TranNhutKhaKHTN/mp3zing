@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import ImgSong from '../../../../containers/home/atoms/ImgSong';
 import { CaretRightOutlined, PauseOutlined, EllipsisOutlined, HeartOutlined } from "@ant-design/icons"
 import styles from './leftcontent.module.scss'
+// import { Carousel } from 'antd';
+// import CarouselSong from '../../molecules/CarouselSong';
 
 
+// const srcaudio = "https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3";
 const LeftContentPlayMucsic: React.FC = () => {
   const [roll, setRoll] = useState(false);
+  // const [music, setMusic]=useState();
   // const [play,setPlay]=useState(false);
 
   const clickPlayMusic = () => {
@@ -13,7 +17,9 @@ const LeftContentPlayMucsic: React.FC = () => {
     setRoll(quay)
     if (quay) {
       const audio = new Audio("https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3");
-      audio.play();
+      //setMusic(audio);
+      // document.getElementById("audio").onplay;
+      audio.play()
     }
   }
 
@@ -23,7 +29,7 @@ const LeftContentPlayMucsic: React.FC = () => {
 
   return (
     <div className={styles.content}>
-
+      {/* <audio id="audio" src={srcaudio}></audio> */}
       <div className={roll ? styles.imgsongroll : styles.imgsong}>
         <ImgSong size="XLL" data={dataleftcontent} />
       </div>
@@ -41,6 +47,7 @@ const LeftContentPlayMucsic: React.FC = () => {
           <EllipsisOutlined />
         </div>
       </div>
+
     </div>
   );
 }

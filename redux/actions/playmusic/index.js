@@ -1,4 +1,4 @@
-import *as type from './../../consts'
+import *as type from '../../actionType'
 export const fetchPlayList = () => {
   return ({
     type: type.FETCH_PLAYLIST,
@@ -31,5 +31,26 @@ export const addDataBoxMusic = (data) => {
   return ({
     type: type.ADD_DATA_BOXMUSIC,
     payload: data
+  })
+}
+
+export const noneloading = () => {
+  return ({
+    type: type.NONE_LOADING,
+    payload: null
+  })
+}
+
+export const fetchData = () => {
+  return ({
+    type: type.FETCH_DATA,
+    payload: null
+  })
+}
+
+export const fetchSuccess = () => {
+  return ({
+    type: type.FETCH_SUCCESS,
+    payload: null
   })
 }
