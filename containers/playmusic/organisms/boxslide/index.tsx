@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ListItemBoxSlide from '../../molecules/listItemBoxslide';
 import styles from './boxslide.module.scss'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
@@ -17,27 +17,27 @@ const BoxSlide: React.FC<Props> = (props: Props) => {
   const data = props.data;
   const title = props.title;
   const [curentSlide, setCurentSlide] = useState(0)
+  const carousel = useRef(null);
   const changeLeft = () => {
-    console.log("left");
-
-    let i = curentSlide - 1;
-    if (i < 0) {
-      i = 0;
+    // console.log("left");
+    const i = curentSlide;
+    if (i > 0) {
+      carousel.current.prev();
+      setCurentSlide(i - 1);
     }
-    console.log(i);
-
-    setCurentSlide(i)
   }
 
   const changeRight = () => {
-    console.log("right");
-    let i = curentSlide + 1;
-    if (i > 2) {
-      i = 2;
+    // console.log("right");
+    const i = curentSlide;
+    if (i < 3) {
+      carousel.current.next()
+      setCurentSlide(i + 1)
     }
-    console.log(i);
-    setCurentSlide(i)
+
   }
+
+  //có thể làm slide bằng react slick
   return (
     <div className={styles.boxslide}>
       <div className={styles.title}>
@@ -48,7 +48,7 @@ const BoxSlide: React.FC<Props> = (props: Props) => {
         </div>
       </div>
       <div>
-        <Carousel dots={true}>
+        <Carousel dots={false} ref={carousel}>
           <div>
             <ListItemBoxSlide data={data} />
           </div>
@@ -59,7 +59,7 @@ const BoxSlide: React.FC<Props> = (props: Props) => {
             <ListItemBoxSlide data={data} />
           </div>
           <div>
-            <h3>4</h3>
+            <ListItemBoxSlide data={data} />
           </div>
         </Carousel>
 

@@ -54,3 +54,10 @@ export const fetchSuccess = () => {
     payload: null
   })
 }
+
+export const setMusicToPlay = (index) => {
+  return ({
+    type: type.SET_MUSIC_TO_PLAY,
+    payload: index
+  })
+}

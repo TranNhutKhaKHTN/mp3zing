@@ -18,6 +18,7 @@ function* fetchDataPlayMusic() {
     call(getListBoxMusic)
   ])
 
+  //< có thể gộp lại thành 1 action addDataPlayMusicPage>
   const actionaddplaylist = addPlayList(playList);
   yield put(actionaddplaylist)
 
@@ -26,6 +27,7 @@ function* fetchDataPlayMusic() {
 
   const actionAddListBoxMusic = addDataBoxMusic(listBoxMusic);
   yield put(actionAddListBoxMusic);
+  //</> 
 
   const getsuccess = fetchSuccess();
   yield put(getsuccess)

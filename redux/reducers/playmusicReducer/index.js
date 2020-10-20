@@ -4,6 +4,7 @@ const initialState = {
   dataPlayList: [],
   dataCardSinger: [],
   dataBoxMusic: [],
+  musicToPlay: null,
   loading: false
 }
 
@@ -38,6 +39,11 @@ const PlayMusicReducer = (state = initialState, action) => {
         ...state,
         dataBoxMusic: action.payload,
         loading: true
+      }
+    case type.SET_MUSIC_TO_PLAY:
+      return {
+        ...state,
+        musicToPlay: action.payload
       }
     default:
       return state
