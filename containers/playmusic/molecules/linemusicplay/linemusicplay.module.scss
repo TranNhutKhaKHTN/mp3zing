@@ -35,3 +35,14 @@
 .playing {
   background-color: #f2f2f2;
 }
+
+.imgsong {
+  position: relative;
+}
+
+.iconplaying {
+  position: absolute;
+  z-index: 1000000;
+  top: 0px;
+  left: 0px;
+}

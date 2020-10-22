@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { setMusicToPlay } from "./../../../../redux/actions/playmusic"
 
 import ImgSong from '../../../../containers/home/atoms/ImgSong';
 import { CaretRightOutlined, PauseOutlined, EllipsisOutlined, HeartOutlined } from "@ant-design/icons"
 import styles from './leftcontent.module.scss'
+import { useKeyPress } from '../../../hooks/useKeyPress';
 
 const srcaudio = "https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3";
 const dataleftcontent = {
@@ -12,14 +14,66 @@ const dataleftcontent = {
 
 const LeftContentPlayMucsic: React.FC = () => {
   const [roll, setRoll] = useState(false);
-  // const [audioPlayMusic, setaudioPlayMusic] = useState(srcaudio)
+  const dispatch = useDispatch()
   const Player = useRef(null);
   const musicToPlay = useSelector((state: any) => state.playmusic.musicToPlay)
   const playList = useSelector((state: any) => state.playmusic.dataPlayList)
-  // console.log(playList);
+  // const keyPlay = useKeyPress("p")
+  const keyNext = useKeyPress("ArrowRight");
+  const keyPrev = useKeyPress("ArrowLeft");
+  const keySpace = useKeyPress("p")
+
+  // const next_previous_play=(i)=>{
+  //   if (musicToPlay + 1 <= playList.length - 1) {
+  //     const action = setMusicToPlay(musicToPlay + 1);
+  //     dispatch(action);
+  //   }
+  //   else {
+  //     const action = setMusicToPlay(0);
+  //     dispatch(action);
+  //   }
+  // }
 
   useEffect(() => {
-    if (musicToPlay) {
+    if (keyPrev) {
+      if (musicToPlay - 1 >= 0) {
+        const action = setMusicToPlay(musicToPlay - 1);
+        dispatch(action);
+      }
+      else {
+        const action = setMusicToPlay(playList.length - 1);
+        dispatch(action);
+      }
+    }
+  }, [keyPrev])
+
+  useEffect(() => {
+    if (keyNext) {
+      // const action = setMusicToPlay(musicToPlay + 1)
+      // dispatch(action)
+      // console.log(set);
+      endPlayMusic()
+    }
+    // console.log(keyNext)
+  }, [keyNext])
+
+  useEffect(() => {
+    if (keySpace) {
+      setRoll(!roll)
+    }
+  }, [keySpace])
+
+  useEffect(() => {
+    if (roll) {
+      Player.current.play();
+    }
+    else {
+      Player.current.pause();
+    }
+  }, [roll])
+
+  useEffect(() => {
+    if (musicToPlay != null) {
       PlayNewAudio(playList[musicToPlay].link)
       setRoll(true)
     }
@@ -28,22 +82,11 @@ const LeftContentPlayMucsic: React.FC = () => {
   const clickPlayMusic = () => {
     const quay = !roll;
     setRoll(quay)
-    if (quay) {
-
-      Player.current.play();
-    }
-    else {
-      Player.current.pause();
-      // Player.current.currentTime = 0;
-      // Player.current.src = "https://drive.google.com/drive/folders/1AD2vakpcEDSdSAfUntgLTunH-Mw6btCP";
-      // setaudioPlayMusic("https://drive.google.com/drive/folders/1AD2vakpcEDSdSAfUntgLTunH-Mw6btCP")
-      // Player.current.play();
-    }
   }
 
   //<> hàm play một bài mới
   const PlayNewAudio = (src: string) => {
-    Player.current.pause();
+    // Player.current.pause();
     Player.current.currentTime = 0;
     Player.current.src = src
     Player.current.load();
@@ -53,8 +96,15 @@ const LeftContentPlayMucsic: React.FC = () => {
 
   //<> hàm bắt sự kiện kết thúc bài hát
   const endPlayMusic = () => {
-    console.log("new play");
-    PlayNewAudio("https://firebasestorage.googleapis.com/v0/b/audio-87a53.appspot.com/o/Jack%20-%20Hoa%20H%E1%BA%A3i%20%C4%90%C6%B0%E1%BB%9Dng%20-%20Official%20Music%20Video.mp3?alt=media&token=8bd7c113-48b0-487a-96c8-f8ab5f785413")
+    // console.log("new play");
+    if (musicToPlay + 1 <= playList.length - 1) {
+      const action = setMusicToPlay(musicToPlay + 1);
+      dispatch(action);
+    }
+    else {
+      const action = setMusicToPlay(0);
+      dispatch(action);
+    }
   }
   //</>
 
