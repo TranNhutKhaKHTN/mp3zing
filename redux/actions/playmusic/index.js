@@ -61,3 +61,10 @@ export const setMusicToPlay = (index) => {
     payload: index
   })
 }
+
+export const setPlaying = (i) => {
+  return ({
+    type: type.SET_PLAYING,
+    payload: i
+  })
+}

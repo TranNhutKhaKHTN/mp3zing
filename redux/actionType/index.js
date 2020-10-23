@@ -17,3 +17,4 @@ export const FETCH_SUCCESS = "FETCH_SUCCESS"
 
 //playmusic
 export const SET_MUSIC_TO_PLAY = "SET_MUSIC_TO_PLAY"
+export const SET_PLAYING = "SET_PLAYING"

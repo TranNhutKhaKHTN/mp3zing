@@ -5,7 +5,7 @@ import ImgSong from '../../../home/atoms/ImgSong';
 import GrIconPlayMusic from '../../atoms/griconplaymusic';
 import MenuLineSong from '../menulinesong';
 import styles from './linemusicplay.module.scss'
-import { setMusicToPlay } from './../../../../redux/actions/playmusic'
+import { setMusicToPlay, setPlaying } from './../../../../redux/actions/playmusic'
 import IconPlaying from '../../atoms/iconplaying';
 
 interface LineMusic {
@@ -25,11 +25,18 @@ const LineMusicPlay: React.FC<Props> = (props: Props) => {
   const index = props.index
   const dispatch = useDispatch();
   const musicToPlay = useSelector((state: any) => state.playmusic.musicToPlay)
+  const playing = useSelector((state: any) => state.playmusic.playing)
 
   const playThis = () => {
     // console.log(index);
-    const action = setMusicToPlay(index);
-    dispatch(action)
+    if (index === musicToPlay) {
+      const action = setPlaying(!playing)
+      dispatch(action)
+    }
+    else {
+      const action = setMusicToPlay(index);
+      dispatch(action)
+    }
   }
 
   return (
@@ -41,7 +48,7 @@ const LineMusicPlay: React.FC<Props> = (props: Props) => {
             <div className={styles.imgsong}>
               <div className={styles.imgsong}>
                 <ImgSong size="SS" data={data} />
-                {index === musicToPlay ? <div className={styles.iconplaying}><IconPlaying /></div> : null}
+                {index === musicToPlay && playing ? <div className={styles.iconplaying}><IconPlaying /></div> : null}
               </div>
             </div>
             <div className={styles.singersong}>

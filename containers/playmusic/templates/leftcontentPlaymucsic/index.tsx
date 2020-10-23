@@ -1,29 +1,90 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useSelector, useDispatch } from "react-redux"
-import { setMusicToPlay } from "./../../../../redux/actions/playmusic"
+import React from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { setPlaying } from "./../../../../redux/actions/playmusic";
+// import { useKeyPress } from '../../../hooks/useKeyPress';
 
 import ImgSong from '../../../../containers/home/atoms/ImgSong';
 import { CaretRightOutlined, PauseOutlined, EllipsisOutlined, HeartOutlined } from "@ant-design/icons"
 import styles from './leftcontent.module.scss'
-import { useKeyPress } from '../../../hooks/useKeyPress';
 
-const srcaudio = "https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3";
+
+// const srcaudio = "https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3";
 const dataleftcontent = {
   image: "https://photo-playlist-zmp3.zadn.vn/radio?src=HavwqN7EzbiAHZUTDj-sJ40CDyesrRORLmWgdM_MiXe7ModBRe6rJWSBAybgWx4Q2rahcZ7Ju0G2I2cMTu7pGrOUVyajlRuOL1xn4gwSVsPdiM4tXSUXu29z&size=thumb/240_240"
 }
 
 const LeftContentPlayMucsic: React.FC = () => {
-  const [roll, setRoll] = useState(false);
+  // const [roll, setRoll] = useState(false);
+  const roll = useSelector((state: any) => state.playmusic.playing)
   const dispatch = useDispatch()
-  const Player = useRef(null);
-  const musicToPlay = useSelector((state: any) => state.playmusic.musicToPlay)
-  const playList = useSelector((state: any) => state.playmusic.dataPlayList)
-  // const keyPlay = useKeyPress("p")
-  const keyNext = useKeyPress("ArrowRight");
-  const keyPrev = useKeyPress("ArrowLeft");
-  const keySpace = useKeyPress("p")
+  // const Player = useRef(null);
+  // const musicToPlay = useSelector((state: any) => state.playmusic.musicToPlay)
+  // const playList = useSelector((state: any) => state.playmusic.dataPlayList)
+  // const keyNext = useKeyPress("ArrowRight");
+  // const keyPrev = useKeyPress("ArrowLeft");
+  // const keySpace = useKeyPress("p")
 
-  // const next_previous_play=(i)=>{
+  // useEffect(() => {
+  //   if (keyPrev) {
+  //     if (musicToPlay - 1 >= 0) {
+  //       const action = setMusicToPlay(musicToPlay - 1);
+  //       dispatch(action);
+  //     }
+  //     else {
+  //       const action = setMusicToPlay(playList.length - 1);
+  //       dispatch(action);
+  //     }
+  //   }
+  // }, [keyPrev])
+
+  // useEffect(() => {
+  //   if (keyNext) {
+  //     endPlayMusic()
+  //   }
+  // }, [keyNext])
+
+  // useEffect(() => {
+  //   if (keySpace) {
+  //     setRoll(!roll)
+  //   }
+  // }, [keySpace])
+
+  // useEffect(() => {
+  //   if (roll) {
+  //     Player.current.play();
+  //   }
+  //   else {
+  //     Player.current.pause();
+  //   }
+  // }, [roll])
+
+  // useEffect(() => {
+  //   if (musicToPlay != null) {
+  //     PlayNewAudio(playList[musicToPlay].link)
+  //     setRoll(true)
+  //   }
+  // }, [musicToPlay])
+
+  const clickPlayMusic = () => {
+    const quay = !roll;
+    const action = setPlaying(quay);
+    console.log(action);
+    dispatch(action);
+  }
+
+  //<> hàm play một bài mới
+  // const PlayNewAudio = (src: string) => {
+  //   // Player.current.pause();
+  //   Player.current.currentTime = 0;
+  //   Player.current.src = src
+  //   Player.current.load();
+  //   Player.current.play();
+  // }
+  // //</>
+
+  //<> hàm bắt sự kiện kết thúc bài hát
+  // const endPlayMusic = () => {
+  //   // console.log("new play");
   //   if (musicToPlay + 1 <= playList.length - 1) {
   //     const action = setMusicToPlay(musicToPlay + 1);
   //     dispatch(action);
@@ -33,86 +94,13 @@ const LeftContentPlayMucsic: React.FC = () => {
   //     dispatch(action);
   //   }
   // }
-
-  useEffect(() => {
-    if (keyPrev) {
-      if (musicToPlay - 1 >= 0) {
-        const action = setMusicToPlay(musicToPlay - 1);
-        dispatch(action);
-      }
-      else {
-        const action = setMusicToPlay(playList.length - 1);
-        dispatch(action);
-      }
-    }
-  }, [keyPrev])
-
-  useEffect(() => {
-    if (keyNext) {
-      // const action = setMusicToPlay(musicToPlay + 1)
-      // dispatch(action)
-      // console.log(set);
-      endPlayMusic()
-    }
-    // console.log(keyNext)
-  }, [keyNext])
-
-  useEffect(() => {
-    if (keySpace) {
-      setRoll(!roll)
-    }
-  }, [keySpace])
-
-  useEffect(() => {
-    if (roll) {
-      Player.current.play();
-    }
-    else {
-      Player.current.pause();
-    }
-  }, [roll])
-
-  useEffect(() => {
-    if (musicToPlay != null) {
-      PlayNewAudio(playList[musicToPlay].link)
-      setRoll(true)
-    }
-  }, [musicToPlay])
-
-  const clickPlayMusic = () => {
-    const quay = !roll;
-    setRoll(quay)
-  }
-
-  //<> hàm play một bài mới
-  const PlayNewAudio = (src: string) => {
-    // Player.current.pause();
-    Player.current.currentTime = 0;
-    Player.current.src = src
-    Player.current.load();
-    Player.current.play();
-  }
-  //</>
-
-  //<> hàm bắt sự kiện kết thúc bài hát
-  const endPlayMusic = () => {
-    // console.log("new play");
-    if (musicToPlay + 1 <= playList.length - 1) {
-      const action = setMusicToPlay(musicToPlay + 1);
-      dispatch(action);
-    }
-    else {
-      const action = setMusicToPlay(0);
-      dispatch(action);
-    }
-  }
   //</>
 
   return (
     <div className={styles.content}>
-      <audio id="player" src={srcaudio} ref={Player} onEnded={endPlayMusic}>
+      {/* <audio id="player" src={srcaudio} ref={Player} onEnded={endPlayMusic}>
 
-      </audio>
+      </audio> */}
       <div className={roll ? styles.imgsongroll : styles.imgsong} onClick={clickPlayMusic}>
         <ImgSong size="XLL" data={dataleftcontent} singer=" " />
       </div>

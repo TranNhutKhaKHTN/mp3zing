@@ -6,9 +6,10 @@ import Footer from '../../containers/home/templates/footer';
 import BodyPlay from './../../containers/playmusic/templates/bodyPlay';
 import Loading from '../../containers/loading';
 import { fetchDataPlayMusic } from './../../redux/actions/playmusic';
+import MiniPlayer from '../../containers/playmusic/templates/miniplayer';
 
 const PlayMusic: React.FC = () => {
-  const loading = useSelector(state => state.playmusic.loading)
+  const loading = useSelector((state: any) => state.playmusic.loading)
   // const [loaded,setLoaded] =useState(false);
   // useEffect(()=>{
   //   setLoaded(true);
@@ -28,6 +29,7 @@ const PlayMusic: React.FC = () => {
       </div>
     </div>
     <Footer />
+    <MiniPlayer></MiniPlayer>
   </div>)
   return (
     <div>

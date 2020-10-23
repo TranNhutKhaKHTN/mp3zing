@@ -1,0 +1,41 @@
+.miniplayer_wraper {
+  width: 100%;
+  position: fixed;
+  z-index: 1000000;
+  height: 80px;
+  background-color: brown;
+
+  padding-left: 50px;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.playcontrol {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  &:hover {
+    color: rgb(97, 97, 100);
+  }
+}
+
+#playpause {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 3px;
+}
+
+.slider {
+  width: 800px;
+}
