@@ -2,15 +2,15 @@
   width: 100%;
   position: fixed;
   z-index: 1000000;
-  height: 80px;
-  background-color: brown;
+  height: 70px;
+  background-image: url("https://zjs.zadn.vn/zmp3-desktop/releases/v0.2.5/images/bg-miniplayer-v1.png");
 
   padding-left: 50px;
   bottom: 0;
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .playcontrol {
@@ -32,10 +32,61 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding-left: 3px;
+  .pause {
+    padding-left: 4px;
+  }
+  .play {
+    padding-left: 1px;
+    font-size: 22px;
+    font-weight: bold;
+  }
 }
 
 .slider {
-  width: 800px;
+  width: 600px;
+}
+
+.imgSong {
+  margin-right: 5px;
+}
+
+.Slidercontrol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+}
+
+.loop {
+  margin-right: 20px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  div {
+    cursor: pointer;
+  }
+}
+
+.selecPlayloop {
+  color: rgb(70, 22, 184);
+  &:hover {
+    color: rgb(70, 22, 184);
+  }
+}
+
+.inforDuration {
+  width: 600px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconitem {
+  &:hover {
+    color: rgb(70, 22, 184);
+  }
 }

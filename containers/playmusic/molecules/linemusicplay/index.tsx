@@ -20,6 +20,8 @@ type Props = {
   index: number
 }
 const menu = <MenuLineSong />
+
+
 const LineMusicPlay: React.FC<Props> = (props: Props) => {
   const data = props.data
   const index = props.index
