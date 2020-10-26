@@ -7,8 +7,7 @@ import ImgSong from '../../../home/atoms/ImgSong';
 import { useKeyPress } from '../../../hooks/useKeyPress';
 import styles from './miniplayer.module.scss'
 
-
-const srcaudio = "https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3";
+// const srcaudio = "https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3";
 const formatDuration = (duration: number) => {
   const dr = Math.floor(duration);
   const p = Math.floor(dr / 60);
@@ -29,6 +28,7 @@ const MiniPlayer: React.FC = () => {
   const currentTime = useRef(0);
   const [curentSlider, setCurentSlider] = useState(0)
   const [playLoop, setPlayLoop] = useState(false);
+  // const [playRandom, setPlayRandom] = useState(false)
 
   const keyNext = useKeyPress("ArrowRight");
   const keyPrev = useKeyPress("ArrowLeft");
@@ -58,6 +58,12 @@ const MiniPlayer: React.FC = () => {
   }
 
   useEffect(() => {
+    Player.current.load();
+    const action = setPlaying(false);
+    dispatch(action)
+  }, [])
+
+  useEffect(() => {
     if (keyPrev) {
       playPrev()
     }
@@ -65,7 +71,7 @@ const MiniPlayer: React.FC = () => {
 
   useEffect(() => {
     if (keyNext) {
-      endPlayMusic()
+      playNext()
     }
   }, [keyNext])
 
@@ -79,15 +85,19 @@ const MiniPlayer: React.FC = () => {
 
   useEffect(() => {
     if (playing) {
+      // console.log("chạy play");
+
       Player.current.play();
+      Player.current.currentTime = currentTime.current
     }
     else {
+      // console.log("chạy pause");
       Player.current.pause();
     }
   }, [playing])
 
   useEffect(() => {
-    if (musicToPlay != null) {
+    if (musicToPlay != null && playing) {
       PlayNewAudio(playList[musicToPlay].link)
     }
   }, [musicToPlay])
@@ -98,6 +108,8 @@ const MiniPlayer: React.FC = () => {
     Player.current.src = src
     Player.current.load();
     Player.current.play();
+    // console.log("hhhh");
+
 
     currentTime.current = 0;
     setCurentSlider(0)
@@ -135,6 +147,7 @@ const MiniPlayer: React.FC = () => {
     currentTime.current = value
     setCurentSlider(value)
     Player.current.currentTime = value
+    // console.log("change");
   }
 
   let current: string
@@ -148,13 +161,16 @@ const MiniPlayer: React.FC = () => {
   }
 
   const playPause = () => {
+    // console.log("pause");
     const quay = !playing;
     const action = setPlaying(quay);
     dispatch(action);
   }
+
+
   return (
     <div className={styles.miniplayer_wraper}>
-      <audio id="player" src={srcaudio} ref={Player} onEnded={endPlayMusic} onDurationChange={changeDuration}>
+      <audio id="player" src={playing ? playList[musicToPlay].link : null} ref={Player} onEnded={endPlayMusic} onDurationChange={changeDuration}>
 
       </audio>
       <div className={styles.playcontrol}>
@@ -175,18 +191,18 @@ const MiniPlayer: React.FC = () => {
         </div>
       </div>
       <div className={styles.imgSong}>
-        <ImgSong size="S" data={playList[musicToPlay]}></ImgSong>
+        <ImgSong size="S" data={playList[musicToPlay]} />
       </div>
 
       <div>
         <div className={styles.inforDuration}>
-          <div style={{ color: "white" }}>{playList[musicToPlay].song} - {playList[musicToPlay].singer}</div>
+          <div style={{ color: "white" }}>{musicToPlay != null ? `${playList[musicToPlay].song} - ${playList[musicToPlay].singer}` : null}</div>
           <div style={{ color: "white", marginRight: 5 }}>
             {formatDuration(curentSlider)}/{current !== "aN:aN" ? current : "00:00"}
           </div>
         </div>
         <div className={styles.Slidercontrol}>
-          <Slider className={styles.slider} tooltipVisible={false} min={0} max={duration} value={curentSlider} onChange={changeSlider} />
+          <Slider className={styles.slider} step={0.1} tooltipVisible={false} min={0} max={duration} value={curentSlider} onChange={changeSlider} />
         </div>
       </div>
 

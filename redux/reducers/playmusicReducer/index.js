@@ -16,7 +16,8 @@ const PlayMusicReducer = (state = initialState, action) => {
       return {
         ...state,
         dataPlayList: action.payload,
-        loading: true
+        loading: true,
+        musicToPlay: 0
       }
     case type.ADD_LIST_CARDSINGER:
       return {
@@ -49,7 +50,7 @@ const PlayMusicReducer = (state = initialState, action) => {
       }
     case type.SET_PLAYING:
       // const playing=state.playing
-      console.log(action);
+      // console.log(action);
       return {
         ...state,
         playing: action.payload

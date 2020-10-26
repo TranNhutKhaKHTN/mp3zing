@@ -29,7 +29,7 @@ const PlayMusic: React.FC = () => {
       </div>
     </div>
     <Footer />
-    <MiniPlayer></MiniPlayer>
+    <MiniPlayer />
   </div>)
   return (
     <div>

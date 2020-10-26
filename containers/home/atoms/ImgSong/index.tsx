@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './imgsong.module.scss'
 import { PlayCircleOutlined } from '@ant-design/icons'
 import { Data } from '../../../interface/interface'
+import LazyLoad from 'react-lazyload'
 
 type Props = {
   image?: string,
@@ -72,7 +73,7 @@ const ImgSong: React.FC<Props> = (props: Props) => {
   return (
     <div className={size}>
       <div className={styles.imgsong}>
-        <img className={styles.img} src={img}></img>
+        <LazyLoad placeholder="loading" hieght={200} ><img className={styles.img} src={img}></img></LazyLoad>
         <div className={styles.opacity} >
           {
             props.singer ?
