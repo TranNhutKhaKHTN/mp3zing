@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './listtabsong.module.scss'
-import TabSongItem from '../../atoms/tabsongitem';
+import TabSongItem from '@containers/home/atoms/tabsongitem';
 import TopItemTab from '../topitemtab';
 
 interface tabsongItem {

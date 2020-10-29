@@ -1,7 +1,7 @@
 import React from 'react';
-import ListLinePlayMusic from '../../organisms/listlineplaymusic';
-import ListCardSinger from '../../organisms/listcardsinger';
-import BoxSlide from '../../organisms/boxslide';
+import ListLinePlayMusic from '@containers/playmusic/organisms/listlineplaymusic';
+import ListCardSinger from '@containers/playmusic/organisms/listcardsinger';
+import BoxSlide from '@containers/playmusic/organisms/boxslide';
 import { useSelector } from 'react-redux';
 
 const RightContentPlaymusic: React.FC = () => {

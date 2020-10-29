@@ -1,5 +1,26 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@containers/*": [
+        "containers/*"
+      ],
+      "@redux/*": [
+        "redux/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ]
+      // "@atoms/*": [
+      //   "containers/../atoms/*"
+      // ],
+      // "@modlecules/*": [
+      //   "containers/modlecules/*"
+      // ],
+      // "@organisms/*": [
+      //   "containers/organisms/*"
+      // ]
+    },
     "target": "es5",
     "lib": [
       "dom",

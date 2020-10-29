@@ -1,6 +1,6 @@
 import { UserAddOutlined } from '@ant-design/icons';
 import React from 'react';
-import ImgSong from '../../../home/atoms/ImgSong';
+import ImgSong from '@containers/home/atoms/ImgSong';
 import styles from './cardsinger.module.scss'
 
 interface Cardsinger {

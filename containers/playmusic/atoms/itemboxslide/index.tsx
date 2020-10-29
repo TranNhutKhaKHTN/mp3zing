@@ -1,5 +1,5 @@
 import React from 'react';
-import ImgSong from '../../../home/atoms/ImgSong';
+import ImgSong from '@containers/home/atoms/ImgSong';
 import styles from './itemboxslide.module.scss';
 
 interface boxslide {

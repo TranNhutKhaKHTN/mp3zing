@@ -1,6 +1,6 @@
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import React from 'react';
-import CardSinger from '../../molecules/cardsinger';
+import CardSinger from '@containers/playmusic/molecules/cardsinger';
 import styles from './listcardsinger.module.scss'
 
 interface Cardsinger {

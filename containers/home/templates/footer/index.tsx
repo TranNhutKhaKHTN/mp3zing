@@ -1,6 +1,6 @@
 import React from 'react';
-import lgfooter from './../../../../public/lgfooter.png'
-import rfooter from './../../../../public/rfooter.png'
+import lgfooter from '@public/lgfooter.png'
+import rfooter from '@public/rfooter.png'
 import styles from './footer.module.scss'
 
 const Footer: React.FC = () => {

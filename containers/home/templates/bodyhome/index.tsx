@@ -1,19 +1,19 @@
 import React from 'react';
-import AD from '../../molecules/ad';
+import AD from '@containers/home/molecules/ad';
 import styles from './body.module.scss'
-import SlideShow from '../../organisms/slideshow';
-import chart from './../../../../public/chart.png'
-import Tending from '../../organisms/Tending';
-import Album from '../../organisms/Album';
-import VideoHot from '../../organisms/videohot';
-import ListNhac from '../../organisms/listnhac';
-import HotSinger from '../../organisms/hotsinger';
-import HotTopic from '../../organisms/hottopic';
-import TabSong from '../../organisms/tabsong';
-import img from './../../../../public/img.png'
-import TabMV from '../../organisms/tabmv';
-import MusicNews from '../../organisms/musicnews';
-import DoiTac from '../../atoms/doitac';
+import SlideShow from '@containers/home/organisms/slideshow';
+import chart from '@public/chart.png'
+import Tending from '@containers/home/organisms/Tending';
+import Album from '@containers/home/organisms/Album';
+import VideoHot from '@containers/home/organisms/videohot';
+import ListNhac from '@containers/home/organisms/listnhac';
+import HotSinger from '@containers/home/organisms/hotsinger';
+import HotTopic from '@containers/home/organisms/hottopic';
+import TabSong from '@containers/home/organisms/tabsong';
+import img from '@public/img.png'
+import TabMV from '@containers/home/organisms/tabmv';
+import MusicNews from '@containers/home/organisms/musicnews';
+import DoiTac from '@containers/home/atoms/doitac';
 
 import { dataAlbum } from '../data/album'
 import { dataListNhac1, dataListNhac2 } from '../data/listnhac'

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./hottopic.module.scss"
-import Topic from '../../atoms/topic';
+import Topic from '@containers/home/atoms/topic';
 
 const HotTopic: React.FC = () => {
   const datas = [

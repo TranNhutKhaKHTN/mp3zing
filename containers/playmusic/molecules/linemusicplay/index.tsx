@@ -1,12 +1,12 @@
 import { Dropdown } from 'antd';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import ImgSong from '../../../home/atoms/ImgSong';
-import GrIconPlayMusic from '../../atoms/griconplaymusic';
+import ImgSong from '@containers/home/atoms/ImgSong';
+import GrIconPlayMusic from '@containers/playmusic/atoms/griconplaymusic';
 import MenuLineSong from '../menulinesong';
 import styles from './linemusicplay.module.scss'
-import { setMusicToPlay, setPlaying } from './../../../../redux/actions/playmusic'
-import IconPlaying from '../../atoms/iconplaying';
+import { setMusicToPlay, setPlaying } from '@redux/actions/playmusic'
+import IconPlaying from '@containers/playmusic/atoms/iconplaying';
 
 interface LineMusic {
   image: string;

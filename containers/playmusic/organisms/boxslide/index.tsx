@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import ListItemBoxSlide from '../../molecules/listItemBoxslide';
+import ListItemBoxSlide from '@containers/playmusic/molecules/listItemBoxslide';
 import styles from './boxslide.module.scss'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { Carousel } from 'antd';

@@ -1,5 +1,5 @@
 import React from 'react';
-import TendItem from '../../molecules/TendItem';
+import TendItem from '@containers/home/molecules/TendItem';
 import styles from './tending.module.scss'
 
 const Tending: React.FC = () => {

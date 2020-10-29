@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './videohotitem.module.scss'
-import ImgSong from '../../atoms/ImgSong';
+import ImgSong from '@containers/home/atoms/ImgSong';
 
 interface videoHot {
   image: string;

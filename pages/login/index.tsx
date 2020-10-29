@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderLogin from '../../containers/login/headerLogin';
-import TabLogin from '../../containers/login/tablogin';
+import HeaderLogin from '@containers/login/headerLogin';
+import TabLogin from '@containers/login/tablogin';
 import styles from './login.module.scss'
 
 const Login: React.FC = () => {

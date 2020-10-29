@@ -1,7 +1,7 @@
 import React from 'react';
-import InforTend from '../../atoms/InforTend';
+import InforTend from '@containers/home/atoms/InforTend';
 import styles from './tenditem.module.scss'
-import CardTend from '../../atoms/cardtend';
+import CardTend from '@containers/home/atoms/cardtend';
 
 interface tenditem {
   index: number;

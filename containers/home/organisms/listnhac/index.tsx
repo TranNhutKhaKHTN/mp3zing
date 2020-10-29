@@ -1,5 +1,5 @@
 import React from 'react';
-import ListNhacItem from '../../molecules/listnhacitem';
+import ListNhacItem from '@containers/home/molecules/listnhacitem';
 import styles from './listnhac.module.scss'
 
 interface listnhac {

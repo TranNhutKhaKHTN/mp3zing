@@ -1,5 +1,5 @@
 import React from 'react';
-import QRcode from './../../../public/QRCode.png'
+import QRcode from '@public/QRCode.png'
 import styles from './qrcode.module.scss'
 
 const QRCode: React.FC = () => {

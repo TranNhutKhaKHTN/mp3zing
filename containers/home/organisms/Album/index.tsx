@@ -1,5 +1,5 @@
 import React from 'react';
-import AlbumItem from '../../molecules/albumitem';
+import AlbumItem from '@containers/home/molecules/albumitem';
 import styles from './album.module.scss'
 
 interface album {

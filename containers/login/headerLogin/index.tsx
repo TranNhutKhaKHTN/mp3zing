@@ -1,5 +1,5 @@
 import React from 'react';
-import zalo from './../../../public/zalo.png'
+import zalo from '@public/zalo.png'
 import styles from './headerlogin.module.scss'
 
 const HeaderLogin: React.FC = () => {

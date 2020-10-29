@@ -1,6 +1,6 @@
 import React from 'react';
 import { EllipsisOutlined, HeartOutlined } from '@ant-design/icons';
-import karaoke from './../../../../public/microphone.svg';
+import karaoke from '@public/microphone.svg';
 import styles from './griconplaymusic.module.scss';
 
 

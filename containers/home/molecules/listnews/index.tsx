@@ -1,6 +1,6 @@
 import React from 'react';
-import TopNews from '../../atoms/topnews';
-import NewItem from '../../atoms/newsitem';
+import TopNews from '@containers/home/atoms/topnews';
+import NewItem from '@containers/home/atoms/newsitem';
 import styles from './listnews.module.scss'
 
 const ListNews: React.FC = () => {

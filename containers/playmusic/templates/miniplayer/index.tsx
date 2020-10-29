@@ -2,9 +2,9 @@ import { CaretRightFilled, PauseOutlined, RetweetOutlined, StepBackwardOutlined,
 import { Slider } from 'antd';
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { setMusicToPlay, setPlaying } from '../../../../redux/actions/playmusic';
-import ImgSong from '../../../home/atoms/ImgSong';
-import { useKeyPress } from '../../../hooks/useKeyPress';
+import { setMusicToPlay, setPlaying } from '@redux/actions/playmusic';
+import ImgSong from '@containers/home/atoms/ImgSong';
+import { useKeyPress } from '@containers/hooks/useKeyPress';
 import styles from './miniplayer.module.scss'
 
 // const srcaudio = "https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3";

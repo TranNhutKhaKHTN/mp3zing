@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs } from 'antd';
 import styles from './tabmv.module.scss'
-import ListTabMV from '../../molecules/listtabmv';
+import ListTabMV from '@containers/home/molecules/listtabmv';
 
 interface tabMV {
   rank: number;

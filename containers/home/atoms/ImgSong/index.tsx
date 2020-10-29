@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './imgsong.module.scss'
 import { PlayCircleOutlined } from '@ant-design/icons'
-import { Data } from '../../../interface/interface'
+import { Data } from '@containers/interface/interface'
 import LazyLoad from 'react-lazyload'
 
 type Props = {

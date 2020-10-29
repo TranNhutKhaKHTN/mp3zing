@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs } from 'antd';
 import styles from './tab.module.scss'
-import ListTabSong from '../../molecules/listtabsong';
+import ListTabSong from '@containers/home/molecules/listtabsong';
 
 const TabSong: React.FC = () => {
   const { TabPane } = Tabs

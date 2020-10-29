@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './hotsinger.module.scss'
-import ImgSong from '../../atoms/ImgSong';
+import ImgSong from '@containers/home/atoms/ImgSong';
 
 
 const hotsingers = [

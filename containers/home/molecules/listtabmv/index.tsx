@@ -1,5 +1,5 @@
 import React from 'react';
-import TabMvItem from '../../atoms/tabmvitem';
+import TabMvItem from '@containers/home/atoms/tabmvitem';
 import TopItemTab from '../topitemtab';
 import styles from './listtabmv.module.scss'
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import src from './../../../../public/doitac.png'
+import src from '@public/doitac.png'
 import styles from './doitac.module.scss'
 
 const DoiTac: React.FC = () => {

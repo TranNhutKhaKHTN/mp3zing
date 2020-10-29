@@ -1,5 +1,5 @@
 import React from 'react';
-import LineMusicPlay from '../../molecules/linemusicplay';
+import LineMusicPlay from '@containers/playmusic/molecules/linemusicplay';
 import styles from './listlineplaymusic.module.scss'
 import { useSelector } from 'react-redux'
 interface LineMusic {

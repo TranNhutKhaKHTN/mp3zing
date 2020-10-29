@@ -1,5 +1,5 @@
 import React from 'react';
-import menusong from './../../../../public/menusong.png'
+import menusong from '@public/menusong.png'
 import styles from './menulinesong.module.scss'
 
 

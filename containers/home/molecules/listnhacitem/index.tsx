@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './listnhac.module.scss'
-import CardTend from '../../atoms/cardtend';
-import ListIcon from '../../atoms/listicon';
+import CardTend from '@containers/home/atoms/cardtend';
+import ListIcon from '@containers/home/atoms/listicon';
 
 interface listnhac {
   image: string;

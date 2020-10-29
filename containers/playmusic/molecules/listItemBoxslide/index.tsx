@@ -1,6 +1,5 @@
-import { Carousel } from 'antd';
 import React from 'react';
-import ItemBoxSlide from '../../atoms/itemboxslide';
+import ItemBoxSlide from '@containers/playmusic/atoms/itemboxslide';
 import styles from "./listitemboxslide.module.scss"
 
 interface boxslide {
@@ -10,13 +9,6 @@ interface boxslide {
 type Props = {
   data: boxslide[],
 }
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79"
-};
 
 const ListItemBoxSlide: React.FC<Props> = (props: Props) => {
   const datas = props.data

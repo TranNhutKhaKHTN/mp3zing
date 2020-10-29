@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoHotItem from '../../molecules/videohotItem';
+import VideoHotItem from '@containers/home/molecules/videohotItem';
 import styles from './videohot.module.scss'
 import { RightOutlined } from '@ant-design/icons'
 

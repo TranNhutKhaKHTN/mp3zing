@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './menubar.module.scss'
 import { HomeOutlined, PoweroffOutlined, CloudUploadOutlined } from '@ant-design/icons'
-import ZingChart from '../../molecules/zingchart';
+import ZingChart from '@containers/home/molecules/zingchart';
 import { useRouter } from 'next/router';
 
 
