@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ListLinePlayMusic from '../../organisms/listlineplaymusic';
 import ListCardSinger from '../../organisms/listcardsinger';
 import BoxSlide from '../../organisms/boxslide';
-import { fetchDataPlayMusic } from './../../../../redux/actions/playmusic';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const RightContentPlaymusic: React.FC = () => {
   const datalinemusic = useSelector((state: any) => state.playmusic.dataPlayList)

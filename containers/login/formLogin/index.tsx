@@ -36,7 +36,7 @@ const FormLogin: React.FC = () => {
         </div>
         <div className={styles.errorMess}>*{errors.passWord && "pasword is required"}</div>
 
-        <div className={styles.grbutton}>
+        <div className={styles.grbutton}>f
           <Button type="primary" htmlType="submit" className={styles.btnlogin}>Đăng nhập với mật khẩu</Button>
           <Button className={styles.btnlogin} style={{ marginTop: 10 }}>Gửi yêu cầu đăng nhập</Button>
         </div>
