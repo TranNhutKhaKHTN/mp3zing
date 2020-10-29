@@ -18,9 +18,7 @@ type Props = {
 
 const PlayMusic: React.FC<Props> = (props: Props) => {
   const loading = useSelector((state: any) => state.playmusic.loading)
-
   const dispatch = useDispatch();
-
   useEffect(() => {
     if (props) {
       // console.log(props.dataplaylist);
@@ -57,9 +55,9 @@ const PlayMusic: React.FC<Props> = (props: Props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await Promise.all([
-    Axios.get("http://localhost:5000/getplaylist"),
-    Axios.get("http://localhost:5000/getboxmusic"),
-    Axios.get("http://localhost:5000/getcardsinger")
+    Axios.get("https://apizing.herokuapp.com/getplaylist"),
+    Axios.get("https://apizing.herokuapp.com/getboxmusic"),
+    Axios.get("https://apizing.herokuapp.com/getcardsinger")
   ]).then((results) => {
     return results
   })
@@ -68,10 +66,17 @@ export const getStaticProps: GetStaticProps = async () => {
       console.log("error");
     })
 
-  console.log(data[0].data.data);
-  const dataplaylist = data[0].data.data;
-  const databoxmusic = data[1].data.data;
-  const datacardsinger = data[2].data.data
+  let dataplaylist: any, databoxmusic: any, datacardsinger: any
+  if (data) {
+    dataplaylist = data[0].data.data;
+    databoxmusic = data[1].data.data;
+    datacardsinger = data[2].data.data
+  }
+  else {
+    dataplaylist = []
+    databoxmusic = []
+    datacardsinger = []
+  }
 
   return {
     props: {
