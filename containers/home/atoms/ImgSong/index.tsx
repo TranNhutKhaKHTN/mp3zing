@@ -3,6 +3,7 @@ import styles from './imgsong.module.scss'
 import { PlayCircleOutlined } from '@ant-design/icons'
 import { Data } from '@containers/interface/interface'
 import LazyLoad from 'react-lazyload'
+import Link from 'next/link';
 
 type Props = {
   image?: string,
@@ -71,18 +72,20 @@ const ImgSong: React.FC<Props> = (props: Props) => {
   }
 
   return (
-    <div className={size}>
-      <div className={styles.imgsong}>
-        <LazyLoad placeholder="loading" hieght={200} ><img className={styles.img} src={img}></img></LazyLoad>
-        <div className={styles.opacity} >
-          {
-            props.singer ?
-              <div className={styles.icon} style={{ fontSize: 14 }}>{props.singer}</div>
-              : <PlayCircleOutlined className={styles.icon} />
-          }
+    <Link href="/playmusic">
+      <div className={size}>
+        <div className={styles.imgsong}>
+          <LazyLoad placeholder="loading" hieght={200} ><img className={styles.img} src={img}></img></LazyLoad>
+          <div className={styles.opacity} >
+            {
+              props.singer ?
+                <div className={styles.icon} style={{ fontSize: 14 }}>{props.singer}</div>
+                : <PlayCircleOutlined className={styles.icon} />
+            }
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
