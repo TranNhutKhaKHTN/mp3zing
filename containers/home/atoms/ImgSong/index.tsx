@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 type Props = {
   image?: string,
-  data: Data,
+  data?: Data,
   singer?: string,
   size?: string,
 }
