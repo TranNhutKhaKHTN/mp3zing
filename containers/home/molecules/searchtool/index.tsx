@@ -32,7 +32,7 @@ const SearchTool: React.FC = () => {
     <div className={styles.search}>
       <Search placeholder="input search text" onChange={searchMusic} enterButton />
       <div>
-        <SearchResult></SearchResult>
+        <SearchResult />
       </div>
     </div>
   );

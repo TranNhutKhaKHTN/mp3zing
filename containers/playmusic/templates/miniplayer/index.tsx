@@ -28,11 +28,10 @@ const MiniPlayer: React.FC = () => {
   const currentTime = useRef(0);
   const [curentSlider, setCurentSlider] = useState(0)
   const [playLoop, setPlayLoop] = useState(false);
-  // const [playRandom, setPlayRandom] = useState(false)
 
   const keyNext = useKeyPress("ArrowRight");
   const keyPrev = useKeyPress("ArrowLeft");
-  const keySpace = useKeyPress("p")
+  const keySpace = useKeyPress("Shift")
 
   const playNext = () => {
     if (musicToPlay + 1 <= playList.length - 1) {
@@ -46,7 +45,6 @@ const MiniPlayer: React.FC = () => {
   }
 
   const playPrev = () => {
-    // console.log("prev");
     if (musicToPlay - 1 >= 0) {
       const action = setMusicToPlay(musicToPlay - 1);
       dispatch(action);
@@ -77,7 +75,6 @@ const MiniPlayer: React.FC = () => {
 
   useEffect(() => {
     if (keySpace) {
-      //setRoll(!roll)
       const action = setPlaying(!playing);
       dispatch(action)
     }
@@ -85,13 +82,10 @@ const MiniPlayer: React.FC = () => {
 
   useEffect(() => {
     if (playing) {
-      // console.log("chạy play");
-
       Player.current.play();
       Player.current.currentTime = currentTime.current
     }
     else {
-      // console.log("chạy pause");
       Player.current.pause();
     }
   }, [playing])
@@ -108,9 +102,6 @@ const MiniPlayer: React.FC = () => {
     Player.current.src = src
     Player.current.load();
     Player.current.play();
-    // console.log("hhhh");
-
-
     currentTime.current = 0;
     setCurentSlider(0)
   }
@@ -129,7 +120,6 @@ const MiniPlayer: React.FC = () => {
 
   const changeDuration = () => {
     const duration = Player.current.duration;
-    console.log(duration);
     setDuration(Math.ceil(duration))
   }
 
@@ -147,7 +137,6 @@ const MiniPlayer: React.FC = () => {
     currentTime.current = value
     setCurentSlider(value)
     Player.current.currentTime = value
-    // console.log("change");
   }
 
   let current: string
@@ -161,7 +150,6 @@ const MiniPlayer: React.FC = () => {
   }
 
   const playPause = () => {
-    // console.log("pause");
     const quay = !playing;
     const action = setPlaying(quay);
     dispatch(action);
@@ -171,7 +159,6 @@ const MiniPlayer: React.FC = () => {
   return (
     <div className={styles.miniplayer_wraper}>
       <audio id="player" src={playing ? playList[musicToPlay].link : null} ref={Player} onEnded={endPlayMusic} onDurationChange={changeDuration}>
-
       </audio>
       <div className={styles.playcontrol}>
         <StepBackwardOutlined onClick={playPrev} />
