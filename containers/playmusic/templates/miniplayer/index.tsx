@@ -28,6 +28,7 @@ const MiniPlayer: React.FC = () => {
   const currentTime = useRef(0);
   const [curentSlider, setCurentSlider] = useState(0)
   const [playLoop, setPlayLoop] = useState(false);
+  const [playRandom, setPlayRanDom] = useState(false)
 
   const keyNext = useKeyPress("ArrowRight");
   const keyPrev = useKeyPress("ArrowLeft");
@@ -110,10 +111,23 @@ const MiniPlayer: React.FC = () => {
   //<> hàm bắt sự kiện kết thúc bài hát
   const endPlayMusic = () => {
     if (!playLoop) {
+
+      if (playRandom) {
+        const n = playList.length;
+        let i: number
+        i = Math.floor(Math.random() * n);
+        while (i === musicToPlay) {
+          i = Math.floor(Math.random() * n)
+        }
+        const action = setMusicToPlay(i);
+        dispatch(action)
+        return
+      }
       playNext()
     }
     else {
       PlayNewAudio(playList[musicToPlay].link)
+      return;
     }
   }
   //</>
@@ -147,6 +161,7 @@ const MiniPlayer: React.FC = () => {
   const playerLoop = () => {
     const loop = !playLoop
     setPlayLoop(loop);
+    setPlayRanDom(!loop)
   }
 
   const playPause = () => {
@@ -155,6 +170,11 @@ const MiniPlayer: React.FC = () => {
     dispatch(action);
   }
 
+  const onPlayRandom = () => {
+    const random = playRandom
+    setPlayRanDom(!random)
+    setPlayLoop(random)
+  }
 
   return (
     <div className={styles.miniplayer_wraper}>
@@ -170,7 +190,7 @@ const MiniPlayer: React.FC = () => {
         <StepForwardFilled onClick={playNext} />
       </div>
       <div className={styles.loop}>
-        <div className={styles.iconitem}>
+        <div className={playRandom ? styles.selecPlayloop : styles.iconitem} onClick={onPlayRandom}>
           <SwapOutlined />
         </div>
         <div className={playLoop ? styles.selecPlayloop : styles.iconitem} onClick={playerLoop}>

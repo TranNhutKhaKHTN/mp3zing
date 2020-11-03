@@ -16,6 +16,7 @@
     "next-images": "^1.6.0",
     "next-routes": "^1.4.2",
     "react": "16.13.1",
+    "react-beautiful-dnd": "^13.0.0",
     "react-dom": "16.13.1",
     "react-hook-form": "^6.9.4",
     "react-lazyload": "^3.0.0",
