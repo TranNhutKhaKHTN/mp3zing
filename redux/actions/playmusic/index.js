@@ -68,3 +68,10 @@ export const setPlaying = (i) => {
     payload: i
   })
 }
+
+export const checkDrag = () => {
+  return {
+    type: type.CHECK_DRAG,
+    payload: null
+  }
+}

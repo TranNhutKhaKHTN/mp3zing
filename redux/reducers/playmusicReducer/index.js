@@ -6,6 +6,7 @@ const initialState = {
   dataBoxMusic: [],
   musicToPlay: null,
   playing: false,
+  checkdrag: false,
   loading: false
 }
 
@@ -16,7 +17,7 @@ const PlayMusicReducer = (state = initialState, action) => {
       return {
         ...state,
         dataPlayList: action.payload,
-        loading: true,
+        // loading: true,
         musicToPlay: 0
       }
     case type.ADD_LIST_CARDSINGER:
@@ -46,7 +47,8 @@ const PlayMusicReducer = (state = initialState, action) => {
       return {
         ...state,
         musicToPlay: action.payload,
-        playing: true
+        playing: true,
+        checkdrag: false
       }
     case type.SET_PLAYING:
       // const playing=state.playing
@@ -54,6 +56,12 @@ const PlayMusicReducer = (state = initialState, action) => {
       return {
         ...state,
         playing: action.payload
+      }
+    case type.CHECK_DRAG:
+      console.log("vô đây");
+      return {
+        ...state,
+        checkdrag: true
       }
     default:
       return state

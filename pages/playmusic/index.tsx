@@ -5,7 +5,7 @@ import styles from './playmusic.module.scss'
 import Footer from '@containers/home/templates/footer';
 import BodyPlay from '@containers/playmusic/templates/bodyPlay';
 import Loading from '@containers/loading';
-import { addCardSinger, addDataBoxMusic, addPlayList, fetchSuccess } from './../../redux/actions/playmusic';
+import { addCardSinger, addDataBoxMusic, addPlayList, fetchData, fetchSuccess } from '@redux/actions/playmusic';
 import MiniPlayer from '@containers/playmusic/templates/miniplayer';
 import { GetStaticProps } from 'next';
 
@@ -21,13 +21,13 @@ const PlayMusic: React.FC<Props> = (props: Props) => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (props) {
-      // define action
+      const action0 = fetchData();
       const action1 = addPlayList(props.dataplaylist)
       const action2 = addCardSinger(props.datacardsinger)
       const action3 = addDataBoxMusic(props.databoxmusic)
       const action4 = fetchSuccess();
 
-      //dispatch action
+      dispatch(action0)
       dispatch(action1)
       dispatch(action2)
       dispatch(action3)

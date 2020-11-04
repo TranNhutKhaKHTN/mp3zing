@@ -21,3 +21,5 @@ export const SET_PLAYING = "SET_PLAYING"
 
 
 export const ADD_KEYWORD = "ADD_KEYWORD"
+
+export const CHECK_DRAG = "CHECK_DRAG"

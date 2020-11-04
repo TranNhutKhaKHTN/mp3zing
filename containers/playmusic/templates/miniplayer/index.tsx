@@ -23,6 +23,7 @@ const MiniPlayer: React.FC = () => {
   const playing = useSelector((state: any) => state.playmusic.playing)
   const musicToPlay = useSelector((state: any) => state.playmusic.musicToPlay)
   const playList = useSelector((state: any) => state.playmusic.dataPlayList)
+  const checkdrag = useSelector((state: any) => state.playmusic.checkdrag)
 
   const [duration, setDuration] = useState(100);
   const currentTime = useRef(0);
@@ -93,9 +94,11 @@ const MiniPlayer: React.FC = () => {
 
   useEffect(() => {
     if (musicToPlay != null && playing) {
-      PlayNewAudio(playList[musicToPlay].link)
+      if (!checkdrag) {
+        PlayNewAudio(playList[musicToPlay].link)
+      }
     }
-  }, [musicToPlay])
+  }, [musicToPlay, checkdrag])
 
   //<> hàm play một bài mới
   const PlayNewAudio = (src: string) => {
@@ -104,6 +107,7 @@ const MiniPlayer: React.FC = () => {
     Player.current.load();
     Player.current.play();
     currentTime.current = 0;
+    // Player.current.currentTime = 0;
     setCurentSlider(0)
   }
   //</>
